@@ -3,16 +3,17 @@ backend:
     repo: gnshd/CherryERC_homepage
     branch: develop
 
-media_folder: "static"
-public_folder: "/public"
+media_folder: "site/static/img"
+public_folder: "/site/public/img"
 
 collections:
   - label: "ブログ" # 管理画面のサイドバーで使う
     name: "blog" # 管理画面のパスで使う　例：/admin/collections/blog
-    folder: "content/blog" # Markdownを保存するディレクトリ。Hugoのsectionにあたる
+    folder: "site/content/blog" # Markdownを保存するディレクトリ。Hugoのsectionにあたる
     create: true # 新しいページを作ることを許可する
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Markdownのファイル名　例：YYYY-MM-DD-title.md
     fields: # ページ作成画面で使う。Front Matterの値を書く
       - {label: "タイトル", name: "title", widget: "string"}
       - {label: "公開日", name: "date", widget: "datetime"}
+      - {label: "サムネイル画像", name: "thumbnail", widget: "image"}
       - {label: "本文", name: "body", widget: "markdown"}
