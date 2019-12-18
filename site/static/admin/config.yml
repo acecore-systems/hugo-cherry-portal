@@ -1,6 +1,6 @@
 backend:
-    name: github
-    repo: gnshd/CherryERC_homepage
+    name: git-gateway
+    # repo: gnshd/CherryERC_homepage
     branch: develop
 
 # アップロードされた画像ファイルのパス
