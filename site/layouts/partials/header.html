@@ -12,26 +12,32 @@
     <div id="navMenu" class="navbar-menu">
         <div class="navbar-start">
             <a class="navbar-item bd-navbar-item-" {{ if eq .Section "" }} style="background-color: rgb(245, 245, 255);" {{ else }} href="/" {{ end }}>
-                <span class="icon has-text-primary">
-                    <i class="fas fa-home"></i>
+                <span class="icon has-text-info">
+                    <i class="fas fa-door-open"></i>
                 </span>
                 <span>ホーム</span>
             </a>
-            <a class="navbar-item bd-navbar-item-" {{ if eq .Section "products" }} style="background-color: rgb(245, 245, 255);" {{ else }} href="/products" {{ end }}>
+            <a class="navbar-item bd-navbar-item-" {{ if eq .Section "experience" }} style="background-color: rgb(245, 245, 255);" {{ else }} href="/experience" {{ end }}>
                 <span class="icon has-text-warning">
-                    <i class="fas fa-star"></i>
+                    <i class="fas fa-chalkboard-teacher"></i>
                 </span>
-                <span>事業内容</span>
+                <span>体験レッスン</span>
+            </a>
+            <a class="navbar-item bd-navbar-item-" {{ if eq .Section "products" }} style="background-color: rgb(245, 245, 255);" {{ else }} href="/products" {{ end }}>
+                <span class="icon has-text-success">
+                    <i class="fas fa-school"></i>
+                </span>
+                <span>教室紹介</span>
             </a>
             <a class="navbar-item bd-navbar-item-" {{ if eq .Section "events" }} style="background-color: rgb(245, 245, 255);" {{ else }} href="/events" {{ end }}>
-                <span class="icon has-text-success">
+                <span class="icon has-text-danger">
                     <i class="fas fa-calendar-alt"></i>
                 </span>
                 <span>イベント</span>
             </a>
             <a class="navbar-item bd-navbar-item-" {{ if eq .Section "contact" }} style="background-color: rgb(245, 245, 255);" {{ else }} href="/contact" {{ end }}>
-                <span class="icon has-text-danger">
-                    <i class="fas fa-heart"></i>
+                <span class="icon has-text-primary">
+                    <i class="fas fa-paper-plane"></i>
                 </span>
                 <span>お問い合わせ</span>
             </a>
