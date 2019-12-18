@@ -35,6 +35,12 @@
                 </span>
                 <span>イベント</span>
             </a>
+            <a class="navbar-item bd-navbar-item-" {{ if eq .Section "blog" }} style="background-color: rgb(245, 245, 255);" {{ else }} href="/blog" {{ end }}>
+                <span class="icon has-text-link">
+                    <i class="fas fa-pen"></i>
+                </span>
+                <span>ブログ</span>
+            </a>
             <a class="navbar-item bd-navbar-item-" {{ if eq .Section "contact" }} style="background-color: rgb(245, 245, 255);" {{ else }} href="/contact" {{ end }}>
                 <span class="icon has-text-primary">
                     <i class="fas fa-paper-plane"></i>
