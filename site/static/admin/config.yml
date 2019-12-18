@@ -1,6 +1,5 @@
 backend:
     name: git-gateway
-    # repo: gnshd/CherryERC_homepage
     branch: develop
 
 # アップロードされた画像ファイルのパス
@@ -12,7 +11,7 @@ site_url: https://cherryerc-homepage-dev.netlify.com
 # サイト編集画面に表示されるリンク
 display_url: https://cherryerc-homepage-dev.netlify.com
 # ログイン画面のロゴ
-logo_url: 
+#logo_url: https://exsample.com/logo.svg
 # 言語設定
 locale: 'ja'
 
