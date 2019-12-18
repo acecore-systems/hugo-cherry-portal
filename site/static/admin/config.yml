@@ -3,20 +3,18 @@ backend:
     repo: gnshd/CherryERC_homepage
     branch: develop
 
-media_folder: "static/img"
-public_folder: "/img"
+media_folder: "static"
+public_folder: "/public"
 
-collections: # A list of collections the CMS should be able to edit
-  - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Post" # Used in the UI, ie.: "New Post"
-    folder: "content/post" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    fields: # The fields each document in this collection have
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Image", name: "image", widget: "image", required: false}
-      - {label: "Tags", name: "tags", widget: "list", required: false}
-      - {label: "Categories", name: "categories", widget: "list", required: false}
-      - {label: "Slug", name: "slug", widget: "string", required: false}
-      - {label: "Draft", name: "draft", widget: "boolean", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
+collections:
+  - label: "Blog" # 管理画面のサイドバーで使う
+    name: "blog" # 管理画面のパスで使う　例：/admin/collections/blog
+    folder: "content/blog" # Markdownを保存するディレクトリ。Hugoのsectionにあたる
+    create: true # 新しいページを作ることを許可する
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Markdownのファイル名　例：YYYY-MM-DD-title.md
+    fields: # ページ作成画面で使う。Front Matterの値を書く
+      - {label: "タイトル", name: "title", widget: "string"}
+      - {label: "公開日", name: "date", widget: "datetime"}
+      - {label: "サムネイル画像", name: "thumbnail", widget: "image"}
+      - {label: "レーティング", name: "rating", widget: "number"}
+      - {label: "本文", name: "body", widget: "markdown"}
