@@ -4,7 +4,7 @@ backend:
     branch: develop
 
 media_folder: "site/static/img"
-public_folder: "/"
+public_folder: "/img"
 
 collections:
   - label: "ブログ" # 管理画面のサイドバーで使う
