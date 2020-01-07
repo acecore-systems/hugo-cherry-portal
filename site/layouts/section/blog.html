@@ -3,24 +3,26 @@
 <section class="section">
   <div class="container">
     {{ .Content }}
-    {{ range (where .Pages "Section" "blog") }}
-    <div class="card">
-      <div class="card-image">
-        <figure class="image is-4by3">
-          <img src="{{ .Params.thumbnail }}" alt="{{ .Title }}" />
-        </figure>
-      </div>
-      <div class="card-content">
-        <div class="content">
-          <a href="{{ .Permalink }}">
-            {{ .Title }}
-          </a>
-          <br>
-          <time datetime="{{ .Date }}">{{ .Date }}</time>
+    <div class="columns">
+      {{ range (where .Pages "Section" "blog") }}
+      <div class="card column">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img src="{{ .Params.thumbnail }}" alt="{{ .Title }}" />
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="content">
+            <a href="{{ .Permalink }}">
+              {{ .Title }}
+            </a>
+            <br>
+            <time datetime="{{ .Date }}">{{ .Date }}</time>
+          </div>
         </div>
       </div>
+      {{ end }}
     </div>
-    {{ end }}
   </div>
 </section>
 
