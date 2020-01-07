@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+<section class="section">
+  <div class="container">
+    <h1>Nice. It's looking good already.</h1>
+    <ul>
+      {{ range (where .Pages "Section" "blog") }}
+      <li>
+        <a href="{{ .Permalink }}">
+          {{ .Title }}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</section>
+
+{{ end }}
+
