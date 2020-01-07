@@ -20,7 +20,6 @@ collections:
   - label: "ブログ" # 管理画面のサイドバーで使う
     name: "blog" # 管理画面のパスで使う　例：/admin/collections/blog
     folder: "site/content/blog" # Markdownを保存するディレクトリ。Hugoのsectionにあたる
-    filter: {field: "page", value: "false"}
     create: true # 新しいページを作ることを許可する
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Markdownのファイル名　例：YYYY-MM-DD-title.md
     fields: # ページ作成画面で使う。Front Matterの値を書く
@@ -31,9 +30,16 @@ collections:
 
   - label: "ページ"
     name: "page"
-    folder: "site/content"
-    filter: {field: "page", value: "true"}
-    create: false
-    fields:
-      - { tabel: "タイトル", name: "title", widget: "string" }
-      - { label: "本文", name: "body", widget: "markdown" }
+    files:
+      - file: "site/content/_index.md"
+        label: "ホームページ"
+        name: "home"
+        fields:
+          - { tabel: "タイトル", name: "title", widget: "string" }
+          - { label: "本文", name: "body", widget: "markdown" }
+      - file: "site/content/experience/_index.md"
+        label: "体験レッスン"
+        name: "experience"
+        fields:
+          - { tabel: "タイトル", name: "title", widget: "string" }
+          - { label: "本文", name: "body", widget: "markdown" }
