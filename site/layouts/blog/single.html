@@ -1,0 +1,15 @@
+{{ define "main" }}
+
+<section class="section">
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    <p class="date">{{ .Date }}</p>
+    <p class="description">{{ .Params.description }}</p>
+    <article class="content">
+      {{ if .Params.thumbnail }}<img src="{{ .Params.thumbnail }}" alt="{{ .Title }}" />{{ end }}
+      {{ .Content }}
+    </article>
+  </div>
+</section>
+
+{{ end }}

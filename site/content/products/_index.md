@@ -1,7 +1,5 @@
 ---
-title: "products"
-date: 2019-10-28T14:36:47+09:00
-draft: false
+title: "教室紹介"
 ---
 
-このページは準備中です
+教室紹介
