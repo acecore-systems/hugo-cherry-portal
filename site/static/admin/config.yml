@@ -43,3 +43,33 @@ collections:
         fields:
           - { tabel: "タイトル", name: "title", widget: "string" }
           - { label: "本文", name: "body", widget: "markdown" }
+      - file: "site/content/products/_index.md"
+        label: "教室紹介"
+        name: "products"
+        fields:
+          - { tabel: "タイトル", name: "title", widget: "string" }
+          - { label: "本文", name: "body", widget: "markdown" }
+      - file: "site/content/events/_index.md"
+        label: "イベント"
+        name: "events"
+        fields:
+          - { tabel: "タイトル", name: "title", widget: "string" }
+          - { label: "本文", name: "body", widget: "markdown" }
+      - file: "site/content/blog/_index.md"
+        label: "ブログ一覧"
+        name: "blog"
+        fields:
+          - { tabel: "タイトル", name: "title", widget: "string" }
+          - { label: "本文", name: "body", widget: "markdown" }
+      - file: "site/content/contact/_index.md"
+        label: "お問い合わせ"
+        name: "contact"
+        fields:
+          - { tabel: "タイトル", name: "title", widget: "string" }
+          - { label: "本文", name: "body", widget: "markdown" }
+      - file: "site/content/_404.md"
+        label: "404"
+        name: "experience"
+        fields:
+          - { tabel: "タイトル", name: "title", widget: "string" }
+          - { label: "本文", name: "body", widget: "markdown" }          
