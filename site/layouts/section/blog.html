@@ -6,6 +6,7 @@
     <ul>
       {{ range (where .Pages "Section" "blog") }}
       <li>
+        {{ if .Params.thumbnail }}<img src="{{ .Params.thumbnail }}" alt="{{ .Title }}" />{{ end }}
         <a href="{{ .Permalink }}">
           {{ .Title }}
         </a>
