@@ -1,12 +1,10 @@
 {{ define "main" }}
 
 <section class="section">
-    <div class="container has-text-centered">
-        <h1 class="title">
-            イベント
-        </h1>	
-        <script async id='calinc-mem112347-height1000' type="text/javascript" src="//freecalend.com/jstac/calinc.js"></script>
-    </div>
+  <div class="container">
+    {{ .Content }}
+    <script async id='calinc-mem112347-height1000' type="text/javascript" src="//freecalend.com/jstac/calinc.js"></script>
+  </div>
 </section>
 
 {{ end }}

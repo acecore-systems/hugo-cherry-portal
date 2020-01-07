@@ -1,52 +1,50 @@
 {{ define "main" }}
 
 <section class="section">
-    <div class="container">
-        <h1 class="title has-text-centered" style="margin-bottom: 3rem;">
-            お問合せフォーム
-        </h1>			
-        <form name="contact" method="POST" action="/thankyou" data-netlify-recaptcha="true"  data-netlify="true">
-            <div class="columns">
-                <div class="box column is-8 is-offset-2">
-                    <div class="field">
-                        <label class="label">名前</label>
-                        <div class="control has-icons-left has-icons-right">
-                            <input name="name" class="input" type="text" placeholder="名前を入力してください" required />
-                            <span class="icon is-small is-left">
-                                <i class="fas fa-user"></i>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="field">
-                        <label class="label">メールアドレス</label>
-                        <div class="control has-icons-left has-icons-right">
-                            <input name="email" class="input" type="email" placeholder="メールアドレスを入力してください" required />
-                            <span class="icon is-small is-left">
-                                <i class="fas fa-envelope"></i>
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="field">
-                        <label class="label">メッセージ</label>
-                        <div class="control">
-                            <textarea name="message" class="textarea" placeholder="お問い合わせ内容を入力してください" required></textarea>
-                        </div>
-                    </div>
-                </div>
+  <div class="container">
+    {{ .Content }}
+    <form name="contact" method="POST" action="/thankyou" data-netlify-recaptcha="true" data-netlify="true">
+      <div class="columns">
+        <div class="box column is-8 is-offset-2">
+          <div class="field">
+            <label class="label">名前</label>
+            <div class="control has-icons-left has-icons-right">
+              <input name="name" class="input" type="text" placeholder="名前を入力してください" required />
+              <span class="icon is-small is-left">
+                <i class="fas fa-user"></i>
+              </span>
             </div>
+          </div>
 
-            <div style="width: 304px;margin: auto;">
-                <div data-netlify-recaptcha="true"></div>
+          <div class="field">
+            <label class="label">メールアドレス</label>
+            <div class="control has-icons-left has-icons-right">
+              <input name="email" class="input" type="email" placeholder="メールアドレスを入力してください" required />
+              <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
             </div>
+          </div>
 
-            <div class="has-text-centered" style="margin-top: 2rem;">
-                <button class="button is-link is-outlined" type="submit">送信</button>
+          <div class="field">
+            <label class="label">メッセージ</label>
+            <div class="control">
+              <textarea name="message" class="textarea" placeholder="お問い合わせ内容を入力してください" required></textarea>
             </div>
+          </div>
+        </div>
+      </div>
 
-        </form>
-    </div>
+      <div style="width: 304px;margin: auto;">
+        <div data-netlify-recaptcha="true"></div>
+      </div>
+
+      <div class="has-text-centered" style="margin-top: 2rem;">
+        <button class="button is-link is-outlined" type="submit">送信</button>
+      </div>
+
+    </form>
+  </div>
 </section>
 
 {{ end }}
