@@ -6,6 +6,7 @@
     <p class="date">{{ .Date }}</p>
     <p class="description">{{ .Params.description }}</p>
     <article class="content">
+      {{ if .Params.thumbnail }}<img src="{{ .Params.thumbnail }}" alt="{{ .Title }}" />{{ end }}
       {{ .Content }}
     </article>
   </div>
