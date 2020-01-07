@@ -1,5 +1,6 @@
 ---
 title: "thankyou"
+page: "true"
 draft: false
 ---
 

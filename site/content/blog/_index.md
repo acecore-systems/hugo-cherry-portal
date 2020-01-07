@@ -1,5 +1,6 @@
 ---
 title: "blog"
+page: "true"
 draft: false
 ---
 

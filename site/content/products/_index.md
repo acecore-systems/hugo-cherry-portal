@@ -1,5 +1,6 @@
 ---
 title: "products"
+page: "true"
 draft: false
 ---
 

@@ -18,59 +18,17 @@ locale: "ja"
 collections:
   - label: "ページ"
     name: "page"
-    files:
-
-      - labal: "ホーム"
-        name: "home"
-        file: "site/content/_index.md"
-        create: false
-        fields:
-          - { tabel: "タイトル", name: "title", widget: "string" }
-          - { label: "本文", name: "body", widget: "markdown" }
-
-      - label: "体験レッスン"
-        name: "experience"
-        file: "site/content/experience/_index.md"
-        create: false
-        fields:
-          - { tabel: "タイトル", name: "title", widget: "string" }
-          - { label: "本文", name: "body", widget: "markdown" }
-
-      - label: "教室紹介"
-        name: "products"
-        file: "site/content/products/_index.md"
-        create: false
-        fields:
-          - { tabel: "タイトル", name: "title", widget: "string" }
-          - { label: "本文", name: "body", widget: "markdown" }
-
-      - label: "イベント"
-        name: "events"
-        file: "site/content/events/_index.md"
-        create: false
-        fields:
-          - { tabel: "タイトル", name: "title", widget: "string" }
-          - { label: "本文", name: "body", widget: "markdown" }
-
-      - label: "お問い合わせ"
-        name: "contact"
-        file: "site/content/contact/_index.md"
-        create: false
-        fields:
-          - { tabel: "タイトル", name: "title", widget: "string" }
-          - { label: "本文", name: "body", widget: "markdown" }
-
-      - label: "送信完了ページ"
-        name: "thankyou"
-        file: "site/content/thankyou/_index.md"
-        create: false
-        fields:
-          - { tabel: "タイトル", name: "title", widget: "string" }
-          - { label: "本文", name: "body", widget: "markdown" }
+    folder: "site/content"
+    filter: {field: "page", value: "true"}
+    create: false
+    fields:
+      - { tabel: "タイトル", name: "title", widget: "string" }
+      - { label: "本文", name: "body", widget: "markdown" }
 
   - label: "ブログ" # 管理画面のサイドバーで使う
     name: "blog" # 管理画面のパスで使う　例：/admin/collections/blog
     folder: "site/content/blog" # Markdownを保存するディレクトリ。Hugoのsectionにあたる
+    filter: {field: "page", value: "false"}
     create: true # 新しいページを作ることを許可する
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Markdownのファイル名　例：YYYY-MM-DD-title.md
     editor:
@@ -80,5 +38,3 @@ collections:
       - { label: "公開日", name: "date", widget: "datetime" }
       - { label: "サムネイル画像", name: "thumbnail", widget: "image" }
       - { label: "本文", name: "body", widget: "markdown" }
-
-

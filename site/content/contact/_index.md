@@ -1,5 +1,6 @@
 ---
 title: "contact"
+page: "true"
 draft: false
 ---
 
