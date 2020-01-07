@@ -16,37 +16,57 @@ display_url: https://cherryerc-homepage-dev.netlify.com
 locale: "ja"
 
 collections:
-  - label: "ホーム"
-    name: "index"
-    files: "site/content/index.yml"
-    create: false
-    fields:
-      - { tabel: "タイトル", name: "title", widget: "string" }
-      - { label: "本文", name: "body", widget: "markdown" }
+  - label: "ページ"
+    name: "page"
+    files:
 
-  - label: "体験レッスン"
-    name: "experience"
-    folder: "site/content/experience"
-    create: false
-    fields:
-      - { tabel: "タイトル", name: "title", widget: "string" }
-      - { label: "本文", name: "body", widget: "markdown" }
+      - labal: "ホーム"
+        name: "home"
+        file: "site/content/_index.md"
+        create: false
+        fields:
+          - { tabel: "タイトル", name: "title", widget: "string" }
+          - { label: "本文", name: "body", widget: "markdown" }
 
-  - label: "教室紹介"
-    name: "products"
-    folder: "site/content/products"
-    create: false
-    fields:
-      - { tabel: "タイトル", name: "title", widget: "string" }
-      - { label: "本文", name: "body", widget: "markdown" }
+      - label: "体験レッスン"
+        name: "experience"
+        file: "site/content/experience/_index.md"
+        create: false
+        fields:
+          - { tabel: "タイトル", name: "title", widget: "string" }
+          - { label: "本文", name: "body", widget: "markdown" }
 
-  - label: "イベント"
-    name: "events"
-    folder: "site/content/events"
-    create: false
-    fields:
-      - { tabel: "タイトル", name: "title", widget: "string" }
-      - { label: "本文", name: "body", widget: "markdown" }
+      - label: "教室紹介"
+        name: "products"
+        file: "site/content/products/_index.md"
+        create: false
+        fields:
+          - { tabel: "タイトル", name: "title", widget: "string" }
+          - { label: "本文", name: "body", widget: "markdown" }
+
+      - label: "イベント"
+        name: "events"
+        file: "site/content/events/_index.md"
+        create: false
+        fields:
+          - { tabel: "タイトル", name: "title", widget: "string" }
+          - { label: "本文", name: "body", widget: "markdown" }
+
+      - label: "お問い合わせ"
+        name: "contact"
+        file: "site/content/contact/_index.md"
+        create: false
+        fields:
+          - { tabel: "タイトル", name: "title", widget: "string" }
+          - { label: "本文", name: "body", widget: "markdown" }
+
+      - label: "送信完了ページ"
+        name: "thankyou"
+        file: "site/content/thankyou/_index.md"
+        create: false
+        fields:
+          - { tabel: "タイトル", name: "title", widget: "string" }
+          - { label: "本文", name: "body", widget: "markdown" }
 
   - label: "ブログ" # 管理画面のサイドバーで使う
     name: "blog" # 管理画面のパスで使う　例：/admin/collections/blog
@@ -61,18 +81,4 @@ collections:
       - { label: "サムネイル画像", name: "thumbnail", widget: "image" }
       - { label: "本文", name: "body", widget: "markdown" }
 
-  - label: "お問い合わせ"
-    name: "contact"
-    folder: "site/content/contact"
-    create: false
-    fields:
-      - { tabel: "タイトル", name: "title", widget: "string" }
-      - { label: "本文", name: "body", widget: "markdown" }
 
-  - label: "送信完了ページ"
-    name: "thankyou"
-    folder: "site/content/thankyou"
-    create: false
-    fields:
-      - { tabel: "タイトル", name: "title", widget: "string" }
-      - { label: "本文", name: "body", widget: "markdown" }
