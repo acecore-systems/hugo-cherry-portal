@@ -1,6 +1,6 @@
 backend:
-    name: git-gateway
-    branch: develop
+  name: git-gateway
+  branch: develop
 
 # アップロードされた画像ファイルのパス
 media_folder: "site/static/img"
@@ -13,9 +13,41 @@ display_url: https://cherryerc-homepage-dev.netlify.com
 # ログイン画面のロゴ
 #logo_url: https://exsample.com/logo.svg
 # 言語設定
-locale: 'ja'
+locale: "ja"
 
 collections:
+  - label: "ホーム"
+    name: "index"
+    folder: "site/content"
+    create: false
+    fields:
+      - { tabel: "タイトル", name: "title", widget: "string" }
+      - { label: "本文", name: "body", widget: "markdown" }
+
+  - label: "体験レッスン"
+    name: "experience"
+    folder: "site/content/experience"
+    create: false
+    fields:
+      - { tabel: "タイトル", name: "title", widget: "string" }
+      - { label: "本文", name: "body", widget: "markdown" }
+
+  - label: "教室紹介"
+    name: "products"
+    folder: "site/content/products"
+    create: false
+    fields:
+      - { tabel: "タイトル", name: "title", widget: "string" }
+      - { label: "本文", name: "body", widget: "markdown" }
+
+  - label: "イベント"
+    name: "events"
+    folder: "site/content/events"
+    create: false
+    fields:
+      - { tabel: "タイトル", name: "title", widget: "string" }
+      - { label: "本文", name: "body", widget: "markdown" }
+
   - label: "ブログ" # 管理画面のサイドバーで使う
     name: "blog" # 管理画面のパスで使う　例：/admin/collections/blog
     folder: "site/content/blog" # Markdownを保存するディレクトリ。Hugoのsectionにあたる
@@ -24,7 +56,23 @@ collections:
     editor:
       preview: false
     fields: # ページ作成画面で使う。Front Matterの値を書く
-      - {label: "タイトル", name: "title", widget: "string"}
-      - {label: "公開日", name: "date", widget: "datetime"}
-      - {label: "サムネイル画像", name: "thumbnail", widget: "image"}
-      - {label: "本文", name: "body", widget: "markdown"}
+      - { label: "タイトル", name: "title", widget: "string" }
+      - { label: "公開日", name: "date", widget: "datetime" }
+      - { label: "サムネイル画像", name: "thumbnail", widget: "image" }
+      - { label: "本文", name: "body", widget: "markdown" }
+
+  - label: "お問い合わせ"
+    name: "contact"
+    folder: "site/content/contact"
+    create: false
+    fields:
+      - { tabel: "タイトル", name: "title", widget: "string" }
+      - { label: "本文", name: "body", widget: "markdown" }
+
+  - label: "送信完了ページ"
+    name: "thankyou"
+    folder: "site/content/thankyou"
+    create: false
+    fields:
+      - { tabel: "タイトル", name: "title", widget: "string" }
+      - { label: "本文", name: "body", widget: "markdown" }
