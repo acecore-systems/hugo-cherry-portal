@@ -1,5 +1,5 @@
 ---
-title: "experience"
+title: "体験レッスン"
 page: "true"
 draft: false
 ---

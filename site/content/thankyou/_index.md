@@ -1,5 +1,5 @@
 ---
-title: "thankyou"
+title: "送信完了画面"
 page: "true"
 draft: false
 ---

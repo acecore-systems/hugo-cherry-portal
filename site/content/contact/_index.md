@@ -1,5 +1,5 @@
 ---
-title: "contact"
+title: "お問い合わせ"
 page: "true"
 draft: false
 ---

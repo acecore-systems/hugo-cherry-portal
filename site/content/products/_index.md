@@ -1,5 +1,5 @@
 ---
-title: "products"
+title: "教室紹介"
 page: "true"
 draft: false
 ---

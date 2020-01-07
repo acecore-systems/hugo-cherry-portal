@@ -1,5 +1,5 @@
 ---
-title: "events"
+title: "イベント"
 page: "true"
 draft: false
 ---

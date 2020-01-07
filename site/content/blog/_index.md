@@ -1,5 +1,5 @@
 ---
-title: "blog"
+title: "ブログ一覧"
 page: "true"
 draft: false
 ---
