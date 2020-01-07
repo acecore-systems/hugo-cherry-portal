@@ -18,7 +18,7 @@ locale: "ja"
 collections:
   - label: "ホーム"
     name: "index"
-    files: "site/content/index"
+    files: "site/content/index.yml"
     create: false
     fields:
       - { tabel: "タイトル", name: "title", widget: "string" }
