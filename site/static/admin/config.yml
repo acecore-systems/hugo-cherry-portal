@@ -69,7 +69,7 @@ collections:
           - { label: "本文", name: "body", widget: "markdown" }
       - file: "site/content/_404.md"
         label: "404"
-        name: "experience"
+        name: "404"
         fields:
           - { tabel: "タイトル", name: "title", widget: "string" }
           - { label: "本文", name: "body", widget: "markdown" }          
