@@ -1,22 +1,13 @@
-<!DOCTYPE html>
-<html lang="ja">
+{{ define "main" }}
 
-  {{- partial "head" . -}}
-
-<body>
-  <div class="wrapper">
-    {{- partial "header" . -}}
-    <div class="content">
-      <section class="section">
-        <div class="container">
-          {{ .Content }}
-        </div>
-      </section>
-    </div>
-    {{- partial "footer" . -}}
+<section class="section">
+  <div class="container">
+    {{ .Content}}
   </div>
-  {{- partial "script" . -}}
-  <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-</body>
+</section>
 
-</html>
+{{ end }}
+
+{{ define "addscript" }}
+<script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+{{ end }}
