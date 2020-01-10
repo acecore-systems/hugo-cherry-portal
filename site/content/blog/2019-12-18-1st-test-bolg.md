@@ -1,6 +1,8 @@
 ---
 title: 1st test bolg
 date: 2019-12-18T04:20:43.708Z
+description: >-
+  テスト用に作成したブログ
 thumbnail: /img/pig-coin_512x512.png
 type: blog
 ---

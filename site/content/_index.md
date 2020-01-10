@@ -1,5 +1,7 @@
 ---
 title: "ホーム"
+description: >-
+  CherryERCのホームページです。
 ---
 
 <!--
