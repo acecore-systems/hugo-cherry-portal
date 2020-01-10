@@ -76,4 +76,10 @@ collections:
         name: "thankyou"
         fields:
           - { tabel: "タイトル", name: "title", widget: "string" }
-          - { label: "本文", name: "body", widget: "markdown" }    
+          - { label: "本文", name: "body", widget: "markdown" }
+      - file: "site/content/airkitchen/_index.md"
+        label: "AirKitchen"
+        name: "home"
+        fields:
+          - { tabel: "タイトル", name: "title", widget: "string" }
+          - { label: "本文", name: "body", widget: "markdown" }

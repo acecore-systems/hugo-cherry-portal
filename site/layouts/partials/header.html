@@ -98,9 +98,15 @@
         <span>お問い合わせ</span>
       </a>
 
-      <a class="navbar-item faa-parent animated-hover" href="#">
+      {{ if eq .Section "airkitchen" }}
+      <a class="navbar-item">
+        <span class="icon" style="color: orange;">
+          <i class="fas fa-utensils faa-pulse animated"></i>
+      {{ else }}
+      <a class="navbar-item faa-parent animated-hover" href="/airkitchen">
         <span class="icon faa-shake" style="color: orange;">
           <i class="fas fa-utensils"></i>
+      {{ end }}
         </span>
         <span>Airkitchen</span>
       </a>
