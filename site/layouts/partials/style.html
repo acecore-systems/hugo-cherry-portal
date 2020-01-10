@@ -1,6 +1,27 @@
 <style type="text/css">
   <!--
+  
+  /*LOGO*/
+  .navbar-brand {
+    position: relative;
+  }
+  a.logo.is-hidden-touch {
+    margin-right: 1.5rem;
+  }
+  a.logo.is-hidden-desktop {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  img.logo {
+    max-height: 40px;
+    height: 40px;
+    width: 40px;
+  }
 
+  /* フッター固定 */
   .wrapper {
     min-height: 100vh;
     position: relative;
@@ -10,7 +31,6 @@
     box-sizing: border-box;
     /*←全て含めてmin-height:100vhに*/
   }
-
   .footer {
     width: 100%;
     background-color: #de8997;
