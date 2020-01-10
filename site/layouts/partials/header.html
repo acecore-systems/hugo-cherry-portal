@@ -19,48 +19,92 @@
   <div id="navMenu" class="navbar-menu">
 
     <div class="navbar-start">
-      <a class="navbar-item" {{ if eq .Section "" }} style="background-color: rgb(245, 245, 255);" {{ else }} href="/" {{ end }}>
+
+      {{ if eq .Section "" }}
+      <a class="navbar-item">
         <span class="icon has-text-info">
+          <i class="fas fa-door-open faa-pulse animated"></i>
+      {{ else }}
+      <a class="navbar-item faa-parent animated-hover" href="/">
+        <span class="icon has-text-info faa-ring">
           <i class="fas fa-door-open"></i>
+      {{ end }}
         </span>
         <span>ホーム</span>
       </a>
-      <a class="navbar-item" {{ if eq .Section "experience" }} style="background-color: rgb(245, 245, 255);" {{ else }} href="/experience" {{ end }}>
+
+      {{ if eq .Section "experience" }} 
+      <a class="navbar-item">
         <span class="icon has-text-warning">
+          <i class="fas fa-chalkboard-teacher faa-pulse animated"></i>
+      {{ else }}
+      <a class="navbar-item faa-parent animated-hover" href="/experience">
+        <span class="icon has-text-warning faa-passing">
           <i class="fas fa-chalkboard-teacher"></i>
+      {{ end }}
         </span>
-        <span>体験レッスン</span>
+        <span>体験レッスン</span> 
       </a>
-      <a class="navbar-item" {{ if eq .Section "products" }} style="background-color: rgb(245, 245, 255);" {{ else }} href="/products" {{ end }}>
+
+      {{ if eq .Section "products" }}
+      <a class="navbar-item">
         <span class="icon has-text-success">
+          <i class="fas fa-school faa-pulse animated"></i>
+      {{ else }}
+      <a class="navbar-item faa-parent animated-hover" href="/products">
+        <span class="icon has-text-success faa-flash">
           <i class="fas fa-school"></i>
+      {{ end }}
         </span>
         <span>教室紹介</span>
       </a>
-      <a class="navbar-item" {{ if eq .Section "events" }} style="background-color: rgb(245, 245, 255);" {{ else }} href="/events" {{ end }}>
+
+      {{ if eq .Section "events" }}
+      <a class="navbar-item">
         <span class="icon has-text-danger">
+          <i class="fas fa-calendar-alt faa-pulse animated"></i>
+      {{ else }}
+      <a class="navbar-item faa-parent animated-hover" href="/events">
+        <span class="icon has-text-danger faa-tada">
           <i class="fas fa-calendar-alt"></i>
+      {{ end }}
         </span>
         <span>イベント</span>
       </a>
-      <a class="navbar-item" {{ if eq .Section "blog" }} style="background-color: rgb(245, 245, 255);" {{ else }} href="/blog" {{ end }}>
+
+      {{ if eq .Section "blog" }}
+      <a class="navbar-item">
         <span class="icon has-text-link">
+          <i class="fas fa-pen faa-pulse animated"></i>
+      {{ else }}
+      <a class="navbar-item faa-parent animated-hover" href="/blog">
+        <span class="icon has-text-link faa-horizontal">
           <i class="fas fa-pen"></i>
+      {{ end }}
         </span>
         <span>ブログ</span>
       </a>
-      <a class="navbar-item" {{ if eq .Section "contact" }} style="background-color: rgb(245, 245, 255);" {{ else }} href="/contact" {{ end }}>
+
+      {{ if eq .Section "contact" }}
+      <a class="navbar-item">
         <span class="icon has-text-primary">
+          <i class="fas fa-paper-plane faa-pulse animated"></i>
+      {{ else }}
+      <a class="navbar-item faa-parent animated-hover" href="/contact">
+        <span class="icon has-text-primary faa-vertical faa-slow ">
           <i class="fas fa-paper-plane"></i>
+      {{ end }}
         </span>
         <span>お問い合わせ</span>
       </a>
-      <a class="navbar-item" href="#">
-        <span class="icon" style="color: orange;">
+
+      <a class="navbar-item faa-parent animated-hover" href="#">
+        <span class="icon faa-shake" style="color: orange;">
           <i class="fas fa-utensils"></i>
         </span>
         <span>Airkitchen</span>
       </a>
+
     </div>
     
   </div>
