@@ -1,5 +1,7 @@
 ---
 title: "AirKitchen"
+description: >-
+  エアーキッチンの紹介ページ
 ---
 
 <!--

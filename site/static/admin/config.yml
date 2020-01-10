@@ -18,19 +18,23 @@ logo_url: logo.png
 locale: "ja"
 
 collections:
-
   - label: "ブログ" # 管理画面のサイドバーで使う
     name: "blog" # 管理画面のパスで使う　例：/admin/collections/blog
+    preview_path: "blog/{{slug}}"
     folder: "site/content/blog" # Markdownを保存するディレクトリ。Hugoのsectionにあたる
-    filter: {field: "type", value: "blog"}
+    filter: { field: "type", value: "blog" }
     create: true # 新しいページを作ることを許可する
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Markdownのファイル名　例：YYYY-MM-DD-title.md
     fields: # ページ作成画面で使う。Front Matterの値を書く
       - { label: "タイトル", name: "title", widget: "string" }
-      - { label: "公開日", name: "date", widget: "datetime" }
+      - { label: "公開日", name: "date", widget: "datetime"}
+      - { label: "記事の説明", name: "description", widget: "text" }
       - { label: "サムネイル画像", name: "thumbnail", widget: "image" }
+      - { label: "サムネイル画像の説明", name: "thumbnailAlt", widget: "string"}
+      - { label: "カテゴリー", name: "categories", widget: "string", required: false}
+      - { label: "タグ", name: "tags", widget: "string", required: false}
       - { label: "本文", name: "body", widget: "markdown" }
-      - { label: "type", name: "type", widget: "hidden", default: "blog"}
+      - { label: "タイプ", name: "type", widget: "hidden", default: "blog" }
 
   - label: "ページ"
     name: "page"
@@ -40,46 +44,54 @@ collections:
         name: "home"
         fields:
           - { tabel: "タイトル", name: "title", widget: "string" }
+          - { label: "このページの説明", name: "description", widget: "text" }
           - { label: "本文", name: "body", widget: "markdown" }
       - file: "site/content/experience/_index.md"
         label: "体験レッスン"
         name: "experience"
         fields:
           - { tabel: "タイトル", name: "title", widget: "string" }
+          - { label: "このページの説明", name: "description", widget: "text" }
           - { label: "本文", name: "body", widget: "markdown" }
       - file: "site/content/products/_index.md"
         label: "教室紹介"
         name: "products"
         fields:
           - { tabel: "タイトル", name: "title", widget: "string" }
+          - { label: "このページの説明", name: "description", widget: "text" }
           - { label: "本文", name: "body", widget: "markdown" }
       - file: "site/content/events/_index.md"
         label: "イベント"
         name: "events"
         fields:
           - { tabel: "タイトル", name: "title", widget: "string" }
+          - { label: "このページの説明", name: "description", widget: "text" }
           - { label: "本文", name: "body", widget: "markdown" }
       - file: "site/content/blog/_index.md"
         label: "ブログ一覧"
         name: "blog"
         fields:
           - { tabel: "タイトル", name: "title", widget: "string" }
+          - { label: "このページの説明", name: "description", widget: "text" }
           - { label: "本文", name: "body", widget: "markdown" }
       - file: "site/content/contact/_index.md"
         label: "お問い合わせ"
         name: "contact"
         fields:
           - { tabel: "タイトル", name: "title", widget: "string" }
+          - { label: "このページの説明", name: "description", widget: "text" }
           - { label: "本文", name: "body", widget: "markdown" }
       - file: "site/content/thankyou/_index.md"
         label: "送信完了画面"
         name: "thankyou"
         fields:
           - { tabel: "タイトル", name: "title", widget: "string" }
+          - { label: "このページの説明", name: "description", widget: "text" }
           - { label: "本文", name: "body", widget: "markdown" }
       - file: "site/content/airkitchen/_index.md"
         label: "AirKitchen"
-        name: "home"
+        name: "airkitchn"
         fields:
           - { tabel: "タイトル", name: "title", widget: "string" }
+          - { label: "このページの説明", name: "description", widget: "text" }
           - { label: "本文", name: "body", widget: "markdown" }
