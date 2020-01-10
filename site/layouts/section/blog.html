@@ -14,8 +14,9 @@
         <div class="card-content">
           <div class="content">
             <a href="{{ .Permalink }}">
-              {{ .Title }}
+              <h3>{{ .Title }}</h3>
             </a>
+            {{ .Description }}
             <br>
             <time datetime="{{ .Date }}">{{ .Date }}</time>
           </div>
