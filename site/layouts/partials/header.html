@@ -2,14 +2,14 @@
   <div class="navbar-brand">
 
     <a class="navbar-item is-paddingless is-hidden-touch logo" href="/">
-      <img src="/img/logo.png" class="logo" alt="logo">
+      <img src="/img/logo.png" data-aos="zoom-in" data-aos-once="true" class="logo" alt="logo">
     </a>
 
     <a class="navbar-item is-paddingless is-hidden-desktop logo" href="/">
-      <img src="/img/logo.png" class="logo" alt="logo">
+      <img src="/img/logo.png" data-aos="zoom-in-down" data-aos-once="true" class="logo" alt="logo">
     </a>
 
-    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <a role="button" class="navbar-burger" data-aos="fade-left" data-aos-once="true" data-target="navMenu" aria-label="menu" aria-expanded="false">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -21,12 +21,12 @@
     <div class="navbar-start">
 
       {{ if .IsHome }}
-      <a class="navbar-item">
+      <a class="navbar-item" data-aos="flip-down" data-aos-once="true">
         <span class="icon has-text-info">
           <i class="fas fa-door-open faa-pulse animated"></i>
       {{ else }}
       <a class="navbar-item faa-parent animated-hover" href="/">
-        <span class="icon has-text-info faa-ring">
+        <span class="icon has-text-info faa-ring" data-aos="zoom-out" data-aos-once="true">
           <i class="fas fa-door-open"></i>
       {{ end }}
         </span>
@@ -34,12 +34,12 @@
       </a>
 
       {{ if eq .Section "experience" }} 
-      <a class="navbar-item">
+      <a class="navbar-item" data-aos="flip-down" data-aos-once="true">
         <span class="icon has-text-warning">
           <i class="fas fa-chalkboard-teacher faa-pulse animated"></i>
       {{ else }}
       <a class="navbar-item faa-parent animated-hover" href="/experience">
-        <span class="icon has-text-warning faa-passing">
+        <span class="icon has-text-warning faa-passing" data-aos="zoom-out" data-aos-once="true">
           <i class="fas fa-chalkboard-teacher"></i>
       {{ end }}
         </span>
@@ -47,12 +47,12 @@
       </a>
 
       {{ if eq .Section "products" }}
-      <a class="navbar-item">
+      <a class="navbar-item" data-aos="flip-down" data-aos-once="true">
         <span class="icon has-text-success">
           <i class="fas fa-school faa-pulse animated"></i>
       {{ else }}
       <a class="navbar-item faa-parent animated-hover" href="/products">
-        <span class="icon has-text-success faa-flash">
+        <span class="icon has-text-success faa-flash" data-aos="zoom-out" data-aos-once="true">
           <i class="fas fa-school"></i>
       {{ end }}
         </span>
@@ -60,12 +60,12 @@
       </a>
 
       {{ if eq .Section "events" }}
-      <a class="navbar-item">
+      <a class="navbar-item" data-aos="flip-down" data-aos-once="true">
         <span class="icon has-text-danger">
           <i class="fas fa-calendar-alt faa-pulse animated"></i>
       {{ else }}
       <a class="navbar-item faa-parent animated-hover" href="/events">
-        <span class="icon has-text-danger faa-tada">
+        <span class="icon has-text-danger faa-tada" data-aos="zoom-out" data-aos-once="true">
           <i class="fas fa-calendar-alt"></i>
       {{ end }}
         </span>
@@ -73,12 +73,12 @@
       </a>
 
       {{ if eq .Section "blog" }}
-      <a class="navbar-item">
+      <a class="navbar-item" data-aos="flip-down" data-aos-once="true">
         <span class="icon has-text-link">
           <i class="fas fa-pen faa-pulse animated"></i>
       {{ else }}
       <a class="navbar-item faa-parent animated-hover" href="/blog">
-        <span class="icon has-text-link faa-horizontal">
+        <span class="icon has-text-link faa-horizontal" data-aos="zoom-out" data-aos-once="true">
           <i class="fas fa-pen"></i>
       {{ end }}
         </span>
@@ -86,12 +86,12 @@
       </a>
 
       {{ if eq .Section "contact" }}
-      <a class="navbar-item">
+      <a class="navbar-item" data-aos="flip-down" data-aos-once="true">
         <span class="icon has-text-primary">
           <i class="fas fa-paper-plane faa-pulse animated"></i>
       {{ else }}
       <a class="navbar-item faa-parent animated-hover" href="/contact">
-        <span class="icon has-text-primary faa-vertical faa-slow ">
+        <span class="icon has-text-primary faa-vertical faa-slow " data-aos="zoom-out" data-aos-once="true">
           <i class="fas fa-paper-plane"></i>
       {{ end }}
         </span>
@@ -99,12 +99,12 @@
       </a>
 
       {{ if eq .Section "airkitchen" }}
-      <a class="navbar-item">
+      <a class="navbar-item" data-aos="flip-down" data-aos-once="true">
         <span class="icon" style="color: orange;">
           <i class="fas fa-utensils faa-pulse animated"></i>
       {{ else }}
       <a class="navbar-item faa-parent animated-hover" href="/airkitchen">
-        <span class="icon faa-shake" style="color: orange;">
+        <span class="icon faa-shake" style="color: orange;" data-aos="zoom-out" data-aos-once="true">
           <i class="fas fa-utensils"></i>
       {{ end }}
         </span>
