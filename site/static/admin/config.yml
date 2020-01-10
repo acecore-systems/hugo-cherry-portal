@@ -20,6 +20,7 @@ locale: "ja"
 collections:
   - label: "ブログ" # 管理画面のサイドバーで使う
     name: "blog" # 管理画面のパスで使う　例：/admin/collections/blog
+    preview_path: "blog/{{slug}}"
     folder: "site/content/blog" # Markdownを保存するディレクトリ。Hugoのsectionにあたる
     filter: { field: "type", value: "blog" }
     create: true # 新しいページを作ることを許可する
@@ -89,7 +90,7 @@ collections:
           - { label: "本文", name: "body", widget: "markdown" }
       - file: "site/content/airkitchen/_index.md"
         label: "AirKitchen"
-        name: "home"
+        name: "airkitchn"
         fields:
           - { tabel: "タイトル", name: "title", widget: "string" }
           - { label: "このページの説明", name: "description", widget: "text" }
