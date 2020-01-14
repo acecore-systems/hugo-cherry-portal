@@ -34,7 +34,7 @@
           </div>
         </div>
 
-        <div class="field" id="recaptcha_field">
+        <div class="field" id="recaptcha_field" style="padding:auto;">
           <div data-netlify-recaptcha="true"></div>
         </div>
 
@@ -55,7 +55,8 @@
 <script>
 
   function reCAPTCHA_Sizer() {
-    const recaptcha = document.getElementById('recaptcha_field');
+    const recaptcha_field = document.getElementById('recaptcha_field');
+    const recaptcha = recaptcha_field.children;
     const recaptcha_width = 304;
     const recaptcha_height = 78;
     const margin_width = 72;
