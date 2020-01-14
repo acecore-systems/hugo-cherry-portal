@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-{{- partial "head" . -}}
+<head>
+  {{- partial "head" . -}}
+  {{- partial "style" . -}}
+  {{- block "addstyle" . }}{{- end }}
+  {{- partial "script" . -}}
+  {{ if .IsHome }}
+  <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  {{ end }}
+</head>
 
 <body>
   <div class="wrapper">
