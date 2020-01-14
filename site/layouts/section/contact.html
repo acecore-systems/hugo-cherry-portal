@@ -64,10 +64,10 @@
     let field_height = recaptcha_height * recaptcha_ratio;
     if (body_width < 640) {
       recaptcha.style.transform = 'scale(' + recaptcha_ratio + ')';
-      recaptcha.div.style.height = field_height;
+      recaptcha.style.height = field_height;
     } else {
       recaptcha.style.transform = 'scale(1)';
-      recaptcha.div.style.height = recaptcha_height;
+      recaptcha.style.height = recaptcha_height;
     }
   }
 
