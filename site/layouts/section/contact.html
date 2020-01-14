@@ -36,7 +36,7 @@
 
         <div class="field">
           <div class="control">
-            <div id="recaptcha" data-netlify-recaptcha="true"></div>
+            <div data-netlify-recaptcha="true"></div>
           </div>
         </div>
 
@@ -53,32 +53,8 @@
 
 {{ end }}
 
-{{ define "addscript" }}
-<script>
-
-  function reCAPTCHA_Sizer() {
-    const recaptcha = document.getElementById('recaptcha');
-    const recaptcha_width = 304;
-    const recaptcha_height = 78;
-    const margin_width = 72;
-    let body_width = document.body.clientWidth;
-    let field_width = body_width - margin_width;
-    let recaptcha_ratio = field_width / recaptcha_width;
-    let field_height = recaptcha_height * recaptcha_ratio;
-    if (body_width < 640) {
-      recaptcha.style.transform = 'scale(' + recaptcha_ratio + ')';
-      recaptcha.style.height = field_height;
-      recaptcha.style.width = field_width;
-    } else {
-      recaptcha.style.transform = 'scale(1)';
-      recaptcha.style.height = recaptcha_height;
-      recaptcha.style.width = recaptcha_height;
-    }
-  }
-
-  window.onresize = function () {
-    reCAPTCHA_Sizer();
-  };
-
-</script>
+{{ define "addstyle" }}
+@media (max-width: 599px) {
+  div#sidebar { width: 100%; }
+}
 {{ end }}
