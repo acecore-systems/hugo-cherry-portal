@@ -6,7 +6,7 @@
       お問合せフォーム
     </h1>
     <form name="contact" method="POST" action="/thankyou" data-netlify-recaptcha="true" data-netlify="true">
-      <div class="box column is-8 is-offset-2" style="min-width: 328px;">
+      <div id="box" class="box column is-8 is-offset-2" style="min-width: 328px;">
         <div class="field">
           <label class="label">名前</label>
           <div class="control has-icons-left has-icons-right">
@@ -35,7 +35,7 @@
         </div>
 
         <div class="field">
-          <div style="width: 304px;margin: auto;">
+          <div id="recaptcha" style="margin: auto;">
             <div data-netlify-recaptcha="true"></div>
           </div>
         </div>
@@ -51,4 +51,31 @@
   </div>
 </section>
 
+{{ end }}
+
+{{ define "addscript" }}
+<script>
+
+  function reCAPTCHA_Sizer() {
+    const recaptcha = document.getElementsById('recaptcha');
+    const recaptcha_width = 304;
+    const recaptcha_height = 78;
+    const margin_width = 72
+    let body_width = document.body.clientWidth;
+    let recaptcha_ratio = (body_width - margin_width) / recaptcha_width;
+    let field_height = recaptcha_height * recaptcha_ratio;
+    if (field_width < recaptcha_width) {
+      recaptcha.style.transform = 'scale(' + recaptcha_ratio + ')';
+      recaptcha.style.height = field_height
+    } else {
+      recaptcha.style.transform = 'scale(1)';
+      recaptcha.style.height = recaptcha_height
+    }
+  }
+
+  window.onresize = function () {
+    reCAPTCHA_Sizer();
+  };
+
+</script>
 {{ end }}
