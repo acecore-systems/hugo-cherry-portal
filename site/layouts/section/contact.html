@@ -57,19 +57,19 @@
 <script>
 
   function reCAPTCHA_Sizer() {
-    const recaptcha = document.getElementsById('recaptcha');
+    const recaptcha = document.getElementById('recaptcha');
     const recaptcha_width = 304;
     const recaptcha_height = 78;
-    const margin_width = 72
+    const margin_width = 72;
     let body_width = document.body.clientWidth;
     let recaptcha_ratio = (body_width - margin_width) / recaptcha_width;
     let field_height = recaptcha_height * recaptcha_ratio;
-    if (field_width < recaptcha_width) {
+    if (body_width < 640) {
       recaptcha.style.transform = 'scale(' + recaptcha_ratio + ')';
-      recaptcha.style.height = field_height
+      recaptcha.style.height = field_height;
     } else {
       recaptcha.style.transform = 'scale(1)';
-      recaptcha.style.height = recaptcha_height
+      recaptcha.style.height = recaptcha_height;
     }
   }
 
