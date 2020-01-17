@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="has-navbar-fixed-top">
 
 <head>
   {{- partial "head" . -}}
@@ -12,13 +12,11 @@
 </head>
 
 <body>
-  <div class="wrapper">
-    {{- partial "header" . -}}
-    <div class="content">
-      {{- block "main" . }}{{- end }}
-    </div>
-    {{- partial "footer" . -}}
+  {{- partial "header" . -}}
+  <div class="content">
+    {{- block "main" . }}{{- end }}
   </div>
+  {{- partial "footer" . -}}
   {{- partial "bottom" . -}}
 </body>
 
