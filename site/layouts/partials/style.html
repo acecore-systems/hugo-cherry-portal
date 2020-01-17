@@ -1,12 +1,21 @@
 <style type="text/css">
   <!--
-  
+
   /* ロゴ */
   .navbar-brand {
     position: relative;
   }
+  img.logo {
+    max-height: 40px;
+    height: 40px;
+    width: 40px;
+  }
   a.logo.is-hidden-touch {
     margin-right: 1.5rem;
+  }
+  a.logo.is-hidden-touch:hover img {
+    transform: scale(1.05);
+    transition-duration: 0.1s;
   }
   a.logo.is-hidden-desktop {
     position: absolute;
@@ -15,29 +24,34 @@
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
-  img.logo {
-    max-height: 40px;
-    height: 40px;
-    width: 40px;
+  a.logo.is-hidden-desktop:hover img {
+    transform: scale(1.05);
+    transition-duration: 0.1s;
   }
 
+  /* ナビゲーションバー */
+  @media screen and (min-width: 1024px) {
+    a.navbar-item.animated-hover:hover {
+      transform: scale(1.1);
+      transition-duration: 0.3s;
+    }
+  }
+
+
   /* フッター固定 */
-  .wrapper {
+  html {
     min-height: 100vh;
     position: relative;
-    /*←相対位置*/
-    padding-bottom: 1rem;
-    /*←footerの高さ*/
+    padding-bottom: 3.5rem;
     box-sizing: border-box;
-    /*←全て含めてmin-height:100vhに*/
   }
   .footer {
+    height: 3.5rem;
     width: 100%;
     padding: 1rem 0;
     position: absolute;
-    /*←絶対位置*/
     bottom: 0;
-    /*下に固定*/
+    box-sizing: border-box;
   }
 
   -->
