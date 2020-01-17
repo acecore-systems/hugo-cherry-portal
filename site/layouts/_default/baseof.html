@@ -12,11 +12,25 @@
 </head>
 
 <body>
-  {{- partial "header" . -}}
-  <div class="content">
-    {{- block "main" . }}{{- end }}
-  </div>
-  {{- partial "footer" . -}}
+
+  <header class="header">
+    {{- partial "header" . -}}
+  </header>
+
+  <section class="section">
+    {{- block "main" . }}
+
+    <div class="container">
+      {{ .Content }}
+    </div>
+
+    {{- end }}
+  </section>
+
+  <footer class="footer">
+    {{- partial "footer" . -}}
+  </footer>
+
   {{- partial "bottom" . -}}
 </body>
 
