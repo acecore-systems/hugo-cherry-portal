@@ -1,4 +1,4 @@
-<section class="hero is-info {{ if .IsHome }} is-fullheight {{ else }} is-medium {{ end }}">
+<section class="hero {{ if .IsHome }} is-fullheight {{ else }} is-medium {{ end }}" style="background-image: url({{ .Params.heroimg }})">
   <div class="hero-head">
     {{- partial "nav" . -}}
   </div>
