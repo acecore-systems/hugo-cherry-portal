@@ -2,6 +2,7 @@
 title: "教室紹介"
 description: >-
   教室紹介
+heroimg: /img/hei_256x128.jpg
 ---
 
 <!--

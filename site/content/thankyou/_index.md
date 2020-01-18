@@ -2,6 +2,7 @@
 title: "送信完了画面"
 description: >-
   お問い合わせの送信完了画面です。
+heroimg: /img/hei_256x128.jpg
 ---
 
 <!--

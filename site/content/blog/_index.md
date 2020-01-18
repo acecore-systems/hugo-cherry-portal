@@ -2,6 +2,7 @@
 title: "ブログ一覧"
 description: >-
   ブログ一覧画面です。
+heroimg: /img/hei_256x128.jpg
 ---
 
 <!--
