@@ -6,16 +6,16 @@
   <div class="hero-body">
     <div class="container has-text-centered">
       {{ if .IsHome }}
-      <p class="title">
+      <h1 class="title is-1 has-text-shadow" style="font-family: 'Ubuntu', sans-serif;">
         CherryERC
-      </p>
-      <p class="subtitle">
+      </h1>
+      <h2 class="subtitle has-text-shadow" style="font-family: 'Ubuntu', sans-serif;">
         Extensive Reading in English Class
-      </p>
+      </h2>
       {{ else }}
-      <p class="title">
+      <h1 class="title has-text-shadow">
         {{ .Title}}
-      </p>
+      </h1>
       {{ end }}
     </div>
   </div>
