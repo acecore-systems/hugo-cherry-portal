@@ -1,4 +1,4 @@
-<nav class="bd-navbar navbar is-fixed-top is-spaced" role="navigation" aria-label="main navigation">
+<nav class="bd-navbar navbar is-fixed-top is-spaced" role="navigation" aria-label="main navigation" style="background-color: rgba(256, 256, 256, 0.7);">
   <div class="navbar-brand">
 
     <a class="navbar-item is-paddingless is-hidden-touch logo" href="/">
@@ -30,10 +30,10 @@
           <i class="fas fa-door-open"></i>
       {{ end }}
         </span>
-        <span class="has-text-shadow">ホーム</span>
+        <span>ホーム</span>
       </a>
 
-      {{ if eq .Section "experience" }} 
+      {{ if eq .Section "experience" }}
       <a class="navbar-item" data-aos="zoom-out" data-aos-once="true">
         <span class="icon has-text-warning">
           <i class="fas fa-chalkboard-teacher faa-pulse faa-fast animated"></i>
@@ -43,7 +43,7 @@
           <i class="fas fa-chalkboard-teacher"></i>
       {{ end }}
         </span>
-        <span class="has-text-shadow">体験レッスン</span> 
+        <span>体験レッスン</span>
       </a>
 
       {{ if eq .Section "products" }}
@@ -56,7 +56,7 @@
           <i class="fas fa-school"></i>
       {{ end }}
         </span>
-        <span class="has-text-shadow">教室紹介</span>
+        <span>教室紹介</span>
       </a>
 
       {{ if eq .Section "events" }}
@@ -69,7 +69,7 @@
           <i class="fas fa-calendar-alt"></i>
       {{ end }}
         </span>
-        <span class="has-text-shadow">イベント</span>
+        <span>イベント</span>
       </a>
 
       {{ if eq .Section "blog" }}
@@ -82,7 +82,7 @@
           <i class="fas fa-pen"></i>
       {{ end }}
         </span>
-        <span class="has-text-shadow">ブログ</span>
+        <span>ブログ</span>
       </a>
 
       {{ if eq .Section "contact" }}
@@ -95,7 +95,7 @@
           <i class="fas fa-paper-plane"></i>
       {{ end }}
         </span>
-        <span class="has-text-shadow">お問い合わせ</span>
+        <span>お問い合わせ</span>
       </a>
 
       {{ if eq .Section "airkitchen" }}
@@ -108,10 +108,10 @@
           <i class="fas fa-utensils"></i>
       {{ end }}
         </span>
-        <span class="has-text-shadow">Airkitchen</span>
+        <span>Airkitchen</span>
       </a>
 
     </div>
-    
+
   </div>
 </nav>

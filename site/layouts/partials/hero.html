@@ -1,9 +1,6 @@
 <section class="hero {{ if .IsHome }} is-fullheight {{ else }} is-medium {{ end }}" style="background-image: url({{ .Params.heroimg }})">
-  <div class="hero-head">
-    {{- partial "nav" . -}}
-  </div>
 
-  <div class="hero-body">
+  <div class="hero-body" style="margin-top: 3.25rem;">
     <div class="container has-text-centered">
       {{ if .IsHome }}
       <h1 class="title is-1 has-text-shadow" style="font-family: 'Ubuntu', sans-serif;">
@@ -20,34 +17,4 @@
     </div>
   </div>
 
-  {{ if .IsHome }}
-
-  <div class="hero-foot">
-    <nav class="tabs is-boxed is-fullwidth">
-      <div class="container">
-        <ul>
-          <li class="is-active">
-            <a>Overview</a>
-          </li>
-          <li>
-            <a>Modifiers</a>
-          </li>
-          <li>
-            <a>Grid</a>
-          </li>
-          <li>
-            <a>Elements</a>
-          </li>
-          <li>
-            <a>Components</a>
-          </li>
-          <li>
-            <a>Layout</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
-
-  {{ end }}
 </section>
