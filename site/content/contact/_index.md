@@ -2,7 +2,7 @@
 title: "お問い合わせ"
 description: >-
   お問い合わせ送信画面です。
-heroimg: /img/hei_256x128.jpg
+heroimg: /img/city_256x128.jpg
 ---
 
 <!--
