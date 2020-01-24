@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja" class="has-navbar-fixed-top">
+<html lang="ja">
 
 <head>
   {{- partial "head" . -}}
@@ -7,7 +7,7 @@
   {{- block "addstyle" . }}{{- end }}
   {{- partial "script" . -}}
   {{ if .IsHome }}
-  <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   {{ end }}
 </head>
 
@@ -15,6 +15,7 @@
 
   <header class="header">
     {{- partial "nav" . -}}
+    {{- partial "hero" . -}}
   </header>
 
   <section class="section">

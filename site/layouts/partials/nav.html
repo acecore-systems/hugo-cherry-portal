@@ -1,12 +1,12 @@
-<nav class="bd-navbar navbar is-fixed-top has-shadow is-spaced" role="navigation" aria-label="main navigation">
+<nav class="bd-navbar navbar is-fixed-top is-spaced" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
 
     <a class="navbar-item is-paddingless is-hidden-touch logo" href="/">
-      <img src="/img/logo.png" data-aos="zoom-in" data-aos-once="true" class="logo" alt="logo">
+      <img src="/img/logo.png" data-aos="zoom-in" data-aos-once="true" alt="logo">
     </a>
 
     <a class="navbar-item is-paddingless is-hidden-desktop logo" href="/">
-      <img src="/img/logo.png" data-aos="zoom-in-down" data-aos-once="true" class="logo" alt="logo">
+      <img src="/img/logo.png" data-aos="zoom-in-down" data-aos-once="true" alt="logo">
     </a>
 
     <a role="button" class="navbar-burger" data-aos="zoom-in" data-aos-once="true" data-target="navMenu" aria-label="menu" aria-expanded="false">
@@ -33,7 +33,7 @@
         <span>ホーム</span>
       </a>
 
-      {{ if eq .Section "experience" }} 
+      {{ if eq .Section "experience" }}
       <a class="navbar-item" data-aos="zoom-out" data-aos-once="true">
         <span class="icon has-text-warning">
           <i class="fas fa-chalkboard-teacher faa-pulse faa-fast animated"></i>
@@ -43,7 +43,7 @@
           <i class="fas fa-chalkboard-teacher"></i>
       {{ end }}
         </span>
-        <span>体験レッスン</span> 
+        <span>体験レッスン</span>
       </a>
 
       {{ if eq .Section "products" }}
@@ -112,6 +112,6 @@
       </a>
 
     </div>
-    
+
   </div>
 </nav>

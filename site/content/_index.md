@@ -2,6 +2,7 @@
 title: "ホーム"
 description: >-
   CherryERCのホームページです。
+heroimg: /img/sky_256x256.jpg
 ---
 
 <!--

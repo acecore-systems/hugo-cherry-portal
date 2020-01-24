@@ -1,42 +1,120 @@
-<style type="text/css">
-  <!--
+<style>
 
   /* ロゴ */
   .navbar-brand {
     position: relative;
   }
-  img.logo {
+  .logo > img {
     max-height: 40px;
     height: 40px;
     width: 40px;
   }
-  a.logo.is-hidden-touch {
+  .logo.is-hidden-touch {
     margin-right: 1.5rem;
   }
-  a.logo.is-hidden-touch:hover img {
+  .logo.is-hidden-touch:hover img {
     transform: scale(1.05);
     transition-duration: 0.1s;
   }
-  a.logo.is-hidden-desktop {
+  .logo.is-hidden-desktop {
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   }
-  a.logo.is-hidden-desktop:hover img {
+  .logo.is-hidden-desktop:hover img {
     transform: scale(1.05);
     transition-duration: 0.1s;
   }
 
   /* ナビゲーションバー */
   @media screen and (min-width: 1024px) {
-    a.navbar-item.animated-hover:hover {
+    .navbar-item.animated-hover:hover {
       transform: scale(1.1);
       transition-duration: 0.3s;
     }
   }
+  @media screen and (max-width: 1023px) {
+    .navbar-menu {
+      background-color: rgba(256, 256, 256, 0.5);
+    }
+  }
 
+  /* ヒーロー */
+  .hero {
+    background-image: url({{ .Params.heroimg }})
+  }
+  .hero .title {
+    text-shadow: 0 0 5px #ffffff;
+  }
+
+  @media screen and (min-width: 769px){
+    .hero .title-home {
+      font-family: 'Ubuntu', sans-serif;
+      mix-blend-mode: color-burn;
+      font-size: 120px;
+    }
+    .hero .subtitle-home {
+      font-family: 'Ubuntu', sans-serif;
+      mix-blend-mode: color-burn;
+      font-size: 40px;
+    }
+  }
+  @media screen and (max-width: 768px){
+    .hero .title-home {
+      font-family: 'Ubuntu', sans-serif;
+      mix-blend-mode: color-burn;
+      font-size: 50px;
+    }
+    .hero .subtitle-home {
+      font-family: 'Ubuntu', sans-serif;
+      mix-blend-mode: color-burn;
+    }
+  }
+
+  {{ if .IsHome }}
+
+    .navbar {
+      background-color: rgba(256, 256, 256, 0);
+    }
+    @media screen and (min-width: 1024px) {
+      .navbar-item {
+        color: #ffffff;
+      }
+    }
+
+  {{ else }}
+
+    .hero-body {
+      margin-top: 3.25rem;
+    }
+    .navbar {
+      background-color: rgba(256, 256, 256, 0.7);
+    }
+
+  {{ end }}
+
+
+
+  /* カバー画像 */
+  .hero {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    background: inherit;
+    filter: blur(5px);
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+  }
 
   /* フッター固定 */
   html {
@@ -54,5 +132,4 @@
     box-sizing: border-box;
   }
 
-  -->
 </style>

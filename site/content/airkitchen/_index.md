@@ -2,6 +2,7 @@
 title: "AirKitchen"
 description: >-
   エアーキッチンの紹介ページ
+heroimg: /img/city_256x128.jpg
 ---
 
 <!--
