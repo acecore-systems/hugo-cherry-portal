@@ -1,16 +1,16 @@
-<section class="hero {{ if .IsHome }} is-fullheight {{ else }} is-medium {{ end }}" style="background-image: url({{ .Params.heroimg }})">
+<section class="hero {{ if .IsHome }} is-fullheight {{ else }} is-medium {{ end }}">
 
-  <div class="hero-body" style="margin-top: 3.25rem;">
+  <div class="hero-body">
     <div class="container has-text-centered">
       {{ if .IsHome }}
-      <h1 class="title is-1 has-text-shadow" style="font-family: 'Ubuntu', sans-serif;">
+      <h1 class="title-home">
         CherryERC
       </h1>
-      <h2 class="subtitle has-text-shadow" style="font-family: 'Ubuntu', sans-serif;">
+      <h2 class="subtitle-home">
         Extensive Reading in English Class
       </h2>
       {{ else }}
-      <h1 class="title has-text-shadow">
+      <h1 class="title">
         {{ .Title}}
       </h1>
       {{ end }}
