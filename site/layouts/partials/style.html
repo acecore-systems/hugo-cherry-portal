@@ -42,7 +42,24 @@
 
   /* ヒーロー */
   .hero {
-    background-image: url({{ .Params.heroimg }})
+    background-image: url({{ .Params.heroimg }});
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    background: inherit;
+    filter: blur(5px);
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5), inset 0 0 100px rgba(0, 0, 0, 0.2);
   }
   .hero .title {
     text-shadow: 0 0 5px #ffffff;
@@ -93,28 +110,6 @@
     }
 
   {{ end }}
-
-
-
-  /* カバー画像 */
-  .hero {
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    z-index: 0;
-    overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    background: inherit;
-    filter: blur(5px);
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    z-index: -1;
-  }
 
   /* フッター固定 */
   html {
