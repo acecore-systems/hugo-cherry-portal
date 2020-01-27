@@ -47,17 +47,17 @@ collections:
           - { label: "このページの説明", name: "description", widget: "text" }
           - { label: "カバー画像", name: "heroimg", widget: "image" }
           - { label: "本文", name: "body", widget: "markdown" }
-      - file: "site/content/experience/_index.md"
-        label: "体験レッスン"
-        name: "experience"
+      - file: "site/content/products/_index.md"
+        label: "教室紹介"
+        name: "products"
         fields:
           - { tabel: "タイトル", name: "title", widget: "string" }
           - { label: "このページの説明", name: "description", widget: "text" }
           - { label: "カバー画像", name: "heroimg", widget: "image" }
           - { label: "本文", name: "body", widget: "markdown" }
-      - file: "site/content/products/_index.md"
-        label: "教室紹介"
-        name: "products"
+      - file: "site/content/experience/_index.md"
+        label: "体験レッスン"
+        name: "experience"
         fields:
           - { tabel: "タイトル", name: "title", widget: "string" }
           - { label: "このページの説明", name: "description", widget: "text" }
@@ -90,6 +90,14 @@ collections:
       - file: "site/content/thankyou/_index.md"
         label: "送信完了画面"
         name: "thankyou"
+        fields:
+          - { tabel: "タイトル", name: "title", widget: "string" }
+          - { label: "このページの説明", name: "description", widget: "text" }
+          - { label: "カバー画像", name: "heroimg", widget: "image" }
+          - { label: "本文", name: "body", widget: "markdown" }
+      - file: "site/content/about/_index.md"
+        label: "事業概要"
+        name: "about"
         fields:
           - { tabel: "タイトル", name: "title", widget: "string" }
           - { label: "このページの説明", name: "description", widget: "text" }

@@ -8,31 +8,31 @@ CherryERC（英語教室）のホームページを作成です。
 
 ## アプリケーションの説明
 
- - 未実装
+- 未実装
 
 ## 動作環境の作り方
-	
+
 下記リンクからHUGOをダウンロードし実行ファイルに環境変数を設定する
 
 https://github.com/gohugoio/hugo/releases
 
-（簡易的に試す場合「bin/使用環境を選択/」にある「hugo.bat」をsite直下に配置）
+（簡易的に試す場合「bin/（使用環境を選択）/」にある「hugo.bat」をsite直下に配置）
 
 siteディレクトリで以下のコマンドを実行
 
-	hugo server -D
+	hugo server
 
-ブラウザで以下にアクセスする
+以下にアクセスする
 
 http://localhost:1313/
 
 ## 構成要素
 
- - ホスト：Netlify
+- ホスト：Netlify
 
- - 静的サイトジェネレーター：HUGO
+- 静的サイトジェネレーター：HUGO
 
- - CSSフレームワーク：Bulma
+- CSSフレームワーク：Bulma
 
 ## プログラム構成
 
