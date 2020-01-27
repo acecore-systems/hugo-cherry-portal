@@ -3,14 +3,14 @@
   <div class="hero-body">
     <div class="container has-text-centered">
       {{ if .IsHome }}
-      <h1 class="title-home">
+      <h1 class="title-home" data-aos="zoom-in" data-aos-delay="750" data-aos-duration="700" data-aos-once="true">
         CherryERC
       </h1>
-      <h2 class="subtitle-home">
+      <h2 class="subtitle-home" data-aos="fade-up" data-aos-delay="1000" data-aos-duration="700" data-aos-once="true">
         Extensive Reading in English Class
       </h2>
       {{ else }}
-      <h1 class="title">
+      <h1 class="title" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700" data-aos-once="true">
         {{ .Title}}
       </h1>
       {{ end }}
