@@ -20,17 +20,17 @@
 
     <div class="navbar-start">
 
-      {{ if .IsHome }}
+      {{ if eq .Section "products" }}
       <a class="navbar-item" data-aos="zoom-out" data-aos-once="true">
-        <span class="icon has-text-info">
-          <i class="fas fa-door-open faa-pulse faa-fast animated"></i>
+        <span class="icon has-text-success">
+          <i class="fas fa-school faa-pulse faa-fast animated"></i>
       {{ else }}
-      <a class="navbar-item faa-parent animated-hover" href="/">
-        <span class="icon has-text-info faa-ring" data-aos="zoom-out" data-aos-once="true">
-          <i class="fas fa-door-open"></i>
+      <a class="navbar-item faa-parent animated-hover" href="/products">
+        <span class="icon has-text-success faa-flash faa-fast" data-aos="zoom-out" data-aos-once="true">
+          <i class="fas fa-school"></i>
       {{ end }}
         </span>
-        <span>ホーム</span>
+        <span>教室紹介</span>
       </a>
 
       {{ if eq .Section "experience" }}
@@ -44,19 +44,6 @@
       {{ end }}
         </span>
         <span>体験レッスン</span>
-      </a>
-
-      {{ if eq .Section "products" }}
-      <a class="navbar-item" data-aos="zoom-out" data-aos-once="true">
-        <span class="icon has-text-success">
-          <i class="fas fa-school faa-pulse faa-fast animated"></i>
-      {{ else }}
-      <a class="navbar-item faa-parent animated-hover" href="/products">
-        <span class="icon has-text-success faa-flash faa-fast" data-aos="zoom-out" data-aos-once="true">
-          <i class="fas fa-school"></i>
-      {{ end }}
-        </span>
-        <span>教室紹介</span>
       </a>
 
       {{ if eq .Section "events" }}
@@ -96,6 +83,19 @@
       {{ end }}
         </span>
         <span>お問い合わせ</span>
+      </a>
+
+      {{ if eq .Section "about" }}
+      <a class="navbar-item" data-aos="zoom-out" data-aos-once="true">
+        <span class="icon has-text-info">
+          <i class="fas fa-flag faa-pulse faa-fast animated"></i>
+      {{ else }}
+      <a class="navbar-item faa-parent animated-hover" href="/about">
+        <span class="icon faa-float faa-fast has-text-info" data-aos="zoom-out" data-aos-once="true">
+          <i class="fas fa-flag"></i>
+      {{ end }}
+        </span>
+        <span>事業概要</span>
       </a>
 
       {{ if eq .Section "airkitchen" }}
