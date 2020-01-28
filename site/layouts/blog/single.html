@@ -3,7 +3,7 @@
 <div class="container">
   <p>{{ .Date.Format "2006年1月2日" }}</p>
   <article class="content">
-    {{ if .Params.thumbnail }}<img loading="lazy" src="{{ .Params.thumbnail }}" alt="{{ .Params.thumbnailAlt }}"/>{{ end }}
+    <img loading="lazy" src="{{ .Params.thumbnail }}" alt="{{ .Params.thumbnailAlt }}"/>
     {{ .Content }}
 
     <div id="disqus_thread"></div>
