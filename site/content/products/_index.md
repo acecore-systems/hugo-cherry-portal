@@ -1,8 +1,10 @@
 ---
-title: "教室紹介"
-description: >-
-  教室紹介
-heroImg: /img/city_256x128.jpg
+title: 「英語で話せるようになる教室」
+description: |
+  英語で話をしたいことを見つける。
+  自分の考えがわかる。
+  自分のやりたいことが英語でできる。
+heroimg: /img/city_256x128.jpg
 ---
 
 <!--
