@@ -59,7 +59,11 @@
         <span>イベント</span>
       </a>
 
-      {{ if eq .Section "blog" }}
+      {{ if eq .Params.type "blog"}}
+      <a class="navbar-item faa-parent animated-hover" href="/blog">
+        <span class="icon has-text-link faa-horizontal" data-aos="zoom-out" data-aos-once="true">
+          <i class="fas fa-pen faa-pulse faa-fast animated"></i>
+      {{ else if eq .Section "blog" }}
       <a class="navbar-item" data-aos="zoom-out" data-aos-once="true">
         <span class="icon has-text-link">
           <i class="fas fa-pen faa-pulse faa-fast animated"></i>
