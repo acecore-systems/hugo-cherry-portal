@@ -14,17 +14,17 @@ CherryERC（英語教室）のホームページを作成です。
 
 下記リンクからHUGOをダウンロードし実行ファイルに環境変数を設定する
 
-https://github.com/gohugoio/hugo/releases
+<https://github.com/gohugoio/hugo/releases>
 
 （簡易的に試す場合「bin/（使用環境を選択）/」にある「hugo.bat」をsite直下に配置）
 
 siteディレクトリで以下のコマンドを実行
 
-	hugo server
+hugo server
 
 以下にアクセスする
 
-http://localhost:1313/
+<http://localhost:1313/>
 
 ## 構成要素
 
@@ -38,10 +38,10 @@ http://localhost:1313/
 
 フォルダ構成は基本的に以下の通りです。
 
-https://gohugo.io/getting-started/directory-structure/#readout
+<https://gohugo.io/getting-started/directory-structure/#readout>
 
 その中でも主に「site/layouts/」以下のファイルを作成しています。
 
 ---
 
-本番環境：https://cherry.acecore.systems
+本番環境：<https://cherry.acecore.systems>
