@@ -11,11 +11,9 @@
 {{ end }}
 
 {{ define "addscript" }}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/3.13.1/js-yaml.min.js"></script>
 <script>
-  const events = [
-    { date: '2020/2/10', title: 'ハロウィン' },
-    { date: '2020/2/14', title: 'バレンタイン' }
-  ]
+  const events = jsyaml.load(`{{ .Params.events }}`)
   const weeks = ['日', '月', '火', '水', '木', '金', '土']
   const date = new Date()
   let year = date.getFullYear()
@@ -71,7 +69,7 @@
           calendarHtml += '<td class="is-disabled">' + num + '</td>'
           dayCount++
         } else {
-          let event = events.find(event => event.date == year + '/' + month + '/' + dayCount)
+          let event = events.find(event => new Date(event.date).getFullYear() === year && new Date(event.date).getMonth() == month - 1 && new Date(event.date).getDate() == dayCount)
           if (event) {
             calendarHtml += '<td>' + dayCount + event.title + '</td>'
           } else {
