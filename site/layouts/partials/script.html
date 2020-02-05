@@ -1,18 +1,3 @@
-<script>
-
-  // bulma-navbar-burger
-  document.addEventListener("DOMContentLoaded", function () {
-    var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll(".navbar-burger"), 0);
-    if ($navbarBurgers.length > 0) {
-      $navbarBurgers.forEach(function ($el) {
-        $el.addEventListener("click", function () {
-          var target = $el.dataset.target;
-          var $target = document.getElementById(target);
-          $el.classList.toggle("is-active");
-          $target.classList.toggle("is-active");
-        });
-      });
-    }
-  });
-
-</script>
+<script async src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>

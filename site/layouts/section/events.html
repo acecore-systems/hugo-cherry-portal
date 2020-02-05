@@ -1,8 +1,189 @@
 {{ define "main" }}
 
 <div class="container">
-  {{ .Content }}
-  <script async id='calinc-mem112347-height1000' type="text/javascript" src="//freecalend.com/jstac/calinc.js"></script>
+
+  <div class="content has-text-centered">
+
+    <button id="prev" type="button">前の月</button>
+    <button id="next" type="button">次の月</button>
+    <div id="calendar"></div>
+
+  </div>
+
 </div>
 
+{{ end }}
+
+
+{{ define "addscript" }}
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/3.13.1/js-yaml.min.js"></script>
+<script>
+  const events = jsyaml.load(`{{ .Params.events }}`)
+  const weeks = ['日', '月', '火', '水', '木', '金', '土']
+  const date = new Date()
+  let year = date.getFullYear()
+  let month = date.getMonth() + 1
+  const config = {
+    show: 1,
+  }
+
+  function showCalendar(year, month) {
+    for (i = 0; i < config.show; i++) {
+      const calendarHtml = createCalendar(year, month)
+      const sec = document.createElement('section')
+      sec.innerHTML = calendarHtml
+      document.querySelector('#calendar').appendChild(sec)
+
+      month++
+      if (month > 12) {
+        year++
+        month = 1
+      }
+    }
+  }
+
+  function createCalendar(year, month) {
+    const startDate = new Date(year, month - 1, 1) // 月の最初の日を取得
+    const endDate = new Date(year, month, 0) // 月の最後の日を取得
+    const endDayCount = endDate.getDate() // 月の末日
+    const lastMonthEndDate = new Date(year, month - 1, 0) // 前月の最後の日の情報
+    const lastMonthendDayCount = lastMonthEndDate.getDate() // 前月の末日
+    const startDay = startDate.getDay() // 月の最初の日の曜日を取得
+    let dayCount = 1 // 日にちのカウント
+    let calendarHtml = '' // HTMLを組み立てる変数
+
+    calendarHtml += '<h1>' + year + '/' + month + '</h1>'
+    calendarHtml += '<table>'
+
+    // 曜日の行を作成
+    for (let i = 0; i < weeks.length; i++) {
+      calendarHtml += '<th>' + weeks[i] + '</th>'
+    }
+
+    for (let w = 0; w < 6; w++) {
+      calendarHtml += '<tr>'
+
+      for (let d = 0; d < 7; d++) {
+        if (w == 0 && d < startDay) {
+          // 1行目で1日の曜日の前
+          let num = lastMonthendDayCount - startDay + d + 1
+          calendarHtml += '<td class="is-disabled"><h3>' + num + '</h3></td>'
+        } else if (dayCount > endDayCount) {
+          // 末尾の日数を超えた
+          let num = dayCount - endDayCount
+          calendarHtml += '<td class="is-disabled"><h3>' + num + '</h3></td>'
+          dayCount++
+        } else {
+          let event = events.find(event => new Date(event.date).getFullYear() === year && new Date(event.date).getMonth() == month - 1 && new Date(event.date).getDate() == dayCount)
+          if (event) {
+            calendarHtml += '<td><h3>' + dayCount + '</h3><p>' + event.title + '</td>'
+          } else {
+            calendarHtml += '<td><h3>' + dayCount + '</h3></td>'
+          }
+          dayCount++
+        }
+      }
+      calendarHtml += '</tr>'
+    }
+    calendarHtml += '</table>'
+
+    return calendarHtml
+  }
+
+  function moveCalendar(e) {
+    document.querySelector('#calendar').innerHTML = ''
+
+    if (e.target.id === 'prev') {
+      month--
+
+      if (month < 1) {
+        year--
+        month = 12
+      }
+    }
+
+    if (e.target.id === 'next') {
+      month++
+
+      if (month > 12) {
+        year++
+        month = 1
+      }
+    }
+
+    showCalendar(year, month)
+  }
+
+  document.querySelector('#prev').addEventListener('click', moveCalendar)
+  document.querySelector('#next').addEventListener('click', moveCalendar)
+
+  showCalendar(year, month)
+</script>
+{{ end }}
+
+
+{{ define "addstyle" }}
+<style>
+  #calendar {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 769px){
+    #calendar section {
+      margin: 1rem;
+    }
+  }
+  @media screen and (max-width: 768px){
+    .section {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  #calendar h1 {
+    font-size: 1rem;
+  }
+
+  #calendar table {
+    table-layout: fixed;
+    border-spacing: 0;
+    border-collapse: collapse;
+  }
+
+  #calendar th {
+    width: auto;
+    border: 1px solid #ddd;
+    padding: 5px;
+    text-align: center;
+  }
+
+  #calendar td {
+    width: 10rem;
+    border: 1px solid #ddd;
+    padding: 5px;
+    height: 5rem;
+  }
+
+  #calendar td h3 {
+    font-size: 1rem;
+  }
+
+  #calendar td p {
+    font-size: 0.8rem;
+  }
+
+  #calendar td:first-child h3,#calendar th:first-child {
+    color: red;
+  }
+
+  #calendar td:last-child h3, #calendar th:last-child {
+    color: royalblue;
+  }
+
+  #calendar td.is-disabled h3{
+    color: #ccc;
+  }
+
+</style>
 {{ end }}
