@@ -2,13 +2,18 @@
 
 <div class="container">
 
-<button id="prev" type="button">前の月</button>
-<button id="next" type="button">次の月</button>
-<div id="calendar"></div>
+  <div class="content has-text-centered">
+
+    <button id="prev" type="button">前の月</button>
+    <button id="next" type="button">次の月</button>
+    <div id="calendar"></div>
+
+  </div>
 
 </div>
 
 {{ end }}
+
 
 {{ define "addscript" }}
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/3.13.1/js-yaml.min.js"></script>
@@ -19,7 +24,7 @@
   let year = date.getFullYear()
   let month = date.getMonth() + 1
   const config = {
-    show: 2,
+    show: 1,
   }
 
   function showCalendar(year, month) {
@@ -52,7 +57,7 @@
 
     // 曜日の行を作成
     for (let i = 0; i < weeks.length; i++) {
-      calendarHtml += '<td>' + weeks[i] + '</td>'
+      calendarHtml += '<th>' + weeks[i] + '</th>'
     }
 
     for (let w = 0; w < 6; w++) {
@@ -62,18 +67,18 @@
         if (w == 0 && d < startDay) {
           // 1行目で1日の曜日の前
           let num = lastMonthendDayCount - startDay + d + 1
-          calendarHtml += '<td class="is-disabled">' + num + '</td>'
+          calendarHtml += '<td class="is-disabled"><h3>' + num + '</h3></td>'
         } else if (dayCount > endDayCount) {
           // 末尾の日数を超えた
           let num = dayCount - endDayCount
-          calendarHtml += '<td class="is-disabled">' + num + '</td>'
+          calendarHtml += '<td class="is-disabled"><h3>' + num + '</h3></td>'
           dayCount++
         } else {
           let event = events.find(event => new Date(event.date).getFullYear() === year && new Date(event.date).getMonth() == month - 1 && new Date(event.date).getDate() == dayCount)
           if (event) {
-            calendarHtml += '<td>' + dayCount + event.title + '</td>'
+            calendarHtml += '<td><h3>' + dayCount + '</h3><p>' + event.title + '</td>'
           } else {
-            calendarHtml += '<td>' + dayCount + '</td>'
+            calendarHtml += '<td><h3>' + dayCount + '</h3></td>'
           }
           dayCount++
         }
@@ -116,6 +121,7 @@
 </script>
 {{ end }}
 
+
 {{ define "addstyle" }}
 <style>
   #calendar {
@@ -123,35 +129,61 @@
     flex-wrap: wrap;
   }
 
-  #calendar section {
-    margin: 10px;
+  @media screen and (min-width: 769px){
+    #calendar section {
+      margin: 1rem;
+    }
+  }
+  @media screen and (max-width: 768px){
+    .section {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   #calendar h1 {
-    font-size: 18px;
+    font-size: 1rem;
   }
 
   #calendar table {
+    table-layout: fixed;
     border-spacing: 0;
     border-collapse: collapse;
   }
 
-  #calendar td {
+  #calendar th {
+    width: auto;
     border: 1px solid #ddd;
     padding: 5px;
     text-align: center;
   }
 
-  #calendar td:first-child {
+  #calendar td {
+    width: 10rem;
+    border: 1px solid #ddd;
+    padding: 5px;
+    height: 5rem;
+  }
+
+  #calendar td h3 {
+    font-size: 1rem;
+  }
+
+  #calendar td p {
+    font-size: 0.8rem;
+  }
+
+  #calendar td:first-child h3,#calendar th:first-child {
     color: red;
   }
 
-  #calendar td:last-child {
+  #calendar td:last-child h3, #calendar th:last-child {
     color: royalblue;
   }
 
-  #calendar td.is-disabled {
+  #calendar td.is-disabled h3{
     color: #ccc;
   }
+
 </style>
 {{ end }}
