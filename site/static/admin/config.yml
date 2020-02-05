@@ -29,7 +29,7 @@ collections:
       - { label: "タイトル", name: "title", widget: "string" }
       - { label: "記事の説明", name: "description", widget: "text" }
       - { label: "カバー画像", name: "heroimg", widget: "image", default: "/img/hei_256x128.jpg"  }
-      - { label: "公開日", name: "date", widget: "date", format: "YYYY/MM/DD"}
+      - { label: "公開日", name: "date", widget: "datetime"}
       - { label: "サムネイル画像", name: "thumbnail", widget: "image" }
       - { label: "サムネイル画像の説明", name: "thumbnailAlt", widget: "string"}
       - { label: "カテゴリー", name: "categories", widget: "list", required: false}
