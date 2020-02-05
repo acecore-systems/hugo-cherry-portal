@@ -1,8 +1,12 @@
 ---
-title: "イベント"
-description: >-
-  イベント画面です。イベントカレンダーを設置しています。
+title: イベント
+description: イベント画面です。イベントカレンダーを設置しています。
 heroimg: /img/city_256x128.jpg
+events:
+  - date: 2020-02-10T04:23:51.930Z
+    title: ハロウィン
+  - date: 2020-02-14T04:24:03.490Z
+    title: バレンタイン
 ---
 
 <!--
