@@ -5,7 +5,7 @@
   {{- partial "head" . -}}
   {{- partial "style" . -}}
   {{- block "addstyle" . }}{{- end }}
-  {{- partial "script" . -}}
+  {{- partial "head_script" . -}}
   {{ if .IsHome }}
   <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   {{ end }}
@@ -32,7 +32,8 @@
     {{- partial "footer" . -}}
   </footer>
 
-  {{- partial "bottom" . -}}
+  {{- partial "script" . -}}
+  {{- block "addscript" . }}{{- end }}
 </body>
 
 </html>

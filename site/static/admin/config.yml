@@ -71,6 +71,13 @@ collections:
           - { tabel: "タイトル", name: "title", widget: "string" }
           - { label: "このページの説明", name: "description", widget: "text" }
           - { label: "カバー画像", name: "heroimg", widget: "image" }
+          - label: "イベント"
+            name: "events"
+            widget: "object"
+            fields: 
+              - {label: "日付", name: "date", widget: "date"}
+              - {label: "タイトル", name: "title", widget: "string"}
+              - {label: "内容", name: "body", widget: "markdown"}
           - { label: "本文", name: "body", widget: "markdown" }
       - file: "site/content/blog/_index.md"
         label: "ブログ一覧"
