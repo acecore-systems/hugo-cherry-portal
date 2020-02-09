@@ -5,6 +5,8 @@ heroimg: /img/city_256x128.jpg
 events:
   - date: 2020-02-01T04:23:51.930Z
     title: ホームページ運用開始
+  - date: 2020-02-09T06:35:33.406Z
+    title: 試しの予定
 ---
 
 <!--
