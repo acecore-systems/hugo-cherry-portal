@@ -52,7 +52,7 @@ collections:
       - { label: "開催日", name: "holddate", widget: "datetime"}
       - { label: "サムネイル画像", name: "thumbnail", widget: "image" }
       - { label: "サムネイル画像の説明", name: "thumbnailAlt", widget: "string"}
-      - { label: "カテゴリー", name: "categories", widget: "list", default: "イベント", required: false}
+      - { label: "カテゴリー", name: "categories", widget: "list", required: false}
       - { label: "タグ", name: "tags", widget: "list", required: false}
       - { label: "本文", name: "body", widget: "markdown" }
       - { label: "タイプ", name: "type", widget: "hidden", default: "events" }      
