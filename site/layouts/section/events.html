@@ -10,26 +10,6 @@
 
   </div>
 
-  <div class="columns">
-    {{ range (where .Pages "Section" "events") }}
-    <div class="card column">
-      <div class="card-image">
-        <figure class="image is-4by3">
-          <img loading="lazy" src="{{ .Params.thumbnail }}" alt="{{ .Params.thumbnailAlt }}" />
-        </figure>
-      </div>
-      <div class="card-content">
-        <div class="content">
-          <h3>{{ .Title }}</h3>
-          {{ .Description }}
-          <p>{{ .Date.Format "2006年1月2日" }}</p>
-          <a href="{{ .Permalink }}">記事を読む →</a>
-        </div>
-      </div>
-    </div>
-    {{ end }}
-  </div>
-
 </div>
 
 {{ end }}
@@ -37,14 +17,11 @@
 
 {{ define "addscript" }}
 <script>
-  const events = [
-    {{ range(where .Pages "Section" "events") }}{ { end } }
-      { title: '{{ .Params.title }}', date: '{{ .Params.date }}' }
+  const events = [{}
+    {{ range (where .Pages "Section" "events") }}
+      ,{ title: '{{ .Params.title }}', description: '{{ .Params.description }}', date: '{{ .Params.holddate }}', thumbnail: '{{ .Params.thumbnail }}', link: '{{ .Permalink }}' }
     {{ end }}
   ]
-  
-  
-  jsyaml.load(`{{ .Params.events }}`)
   const weeks = ['日', '月', '火', '水', '木', '金', '土']
   const date = new Date()
   let year = date.getFullYear()
@@ -102,7 +79,7 @@
         } else {
           let event = events.find(event => new Date(event.date).getFullYear() === year && new Date(event.date).getMonth() == month - 1 && new Date(event.date).getDate() == dayCount)
           if (event) {
-            calendarHtml += '<td><h3>' + dayCount + '</h3><p>' + event.title + '</td>'
+            calendarHtml += '<td background=' + event.thumbnail + ' ><h3>' + dayCount + '</h3><a href=' + event.link + ' ><p>' + event.title + '</p><p>' + event.description + '</p></a></td>'
           } else {
             calendarHtml += '<td><h3>' + dayCount + '</h3></td>'
           }
@@ -150,6 +127,7 @@
 
 {{ define "addstyle" }}
 <style>
+
   #calendar {
     display: flex;
     flex-wrap: wrap;
@@ -197,6 +175,10 @@
 
   #calendar td p {
     font-size: 0.8rem;
+    padding: 0;
+    margin: 0;
+    color: black;
+    background-color: #ffffff94;
   }
 
   #calendar td:first-child h3,#calendar th:first-child {
