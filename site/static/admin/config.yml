@@ -37,6 +37,26 @@ collections:
       - { label: "本文", name: "body", widget: "markdown" }
       - { label: "タイプ", name: "type", widget: "hidden", default: "blog" }
 
+  - label: "イベント" # 管理画面のサイドバーで使う
+    name: "events" # 管理画面のパスで使う　例：/admin/collections/blog
+    preview_path: "events/{{slug}}"
+    folder: "site/content/events" # Markdownを保存するディレクトリ。Hugoのsectionにあたる
+    filter: { field: "type", value: "events" }
+    create: true # 新しいページを作ることを許可する
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Markdownのファイル名　例：YYYY-MM-DD-title.md
+    fields: # ページ作成画面で使う。Front Matterの値を書く
+      - { label: "イベントタイトル", name: "title", widget: "string" }
+      - { label: "イベント概要", name: "description", widget: "text" }
+      - { label: "カバー画像", name: "heroimg", widget: "image", default: "/img/hei_256x128.jpg"  }
+      - { label: "公開日", name: "date", widget: "datetime"}
+      - { label: "開催日", name: "holddate", widget: "datetime"}
+      - { label: "サムネイル画像", name: "thumbnail", widget: "image" }
+      - { label: "サムネイル画像の説明", name: "thumbnailAlt", widget: "string"}
+      - { label: "カテゴリー", name: "categories", widget: "list", default: "イベント", required: false}
+      - { label: "タグ", name: "tags", widget: "list", required: false}
+      - { label: "本文", name: "body", widget: "markdown" }
+      - { label: "タイプ", name: "type", widget: "hidden", default: "events" }      
+
   - label: "ページ"
     name: "page"
     files:

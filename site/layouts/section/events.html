@@ -10,6 +10,26 @@
 
   </div>
 
+  <div class="columns">
+    {{ range (where .Pages "Section" "blog") }}
+    <div class="card column">
+      <div class="card-image">
+        <figure class="image is-4by3">
+          <img loading="lazy" src="{{ .Params.thumbnail }}" alt="{{ .Params.thumbnailAlt }}" />
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="content">
+          <h3>{{ .Title }}</h3>
+          {{ .Description }}
+          <p>{{ .Date.Format "2006年1月2日" }}</p>
+          <a href="{{ .Permalink }}">記事を読む →</a>
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+
 </div>
 
 {{ end }}
