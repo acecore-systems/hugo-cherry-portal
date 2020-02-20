@@ -36,9 +36,15 @@
 
 
 {{ define "addscript" }}
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/3.13.1/js-yaml.min.js"></script>
 <script>
-  const events = jsyaml.load(`{{ .Params.events }}`)
+  const events = [
+    {{ range(where .Pages "Section" "events") }}{ { end } }
+      { title: '{{ .Params.title }}', date: '{{ .Params.date }}' }
+    {{ end }}
+  ]
+  
+  
+  jsyaml.load(`{{ .Params.events }}`)
   const weeks = ['日', '月', '火', '水', '木', '金', '土']
   const date = new Date()
   let year = date.getFullYear()
