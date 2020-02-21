@@ -1,7 +1,7 @@
 ---
 title: イベント
 description: イベント画面です。イベントカレンダーを設置しています。
-heroimg: /img/city_256x128.jpg
+heroImg: /img/city_256x128.jpg
 events:
   - date: 2020-02-01T04:23:51.930Z
     title: ホームページ運用開始

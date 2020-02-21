@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <div class="container">
-  <p>記事作成日：{{ .Date.Format "2006年1月2日" }}</p>
+  <p>記事作成日：{{ .PublishDate.Format "2006年1月2日" }}</p>
   <article class="content">
     <img loading="lazy" decoding="async" src="{{ .Params.thumbnail }}" alt="{{ .Params.thumbnailAlt }}"/>
     {{ .Content }}
