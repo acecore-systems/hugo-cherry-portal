@@ -46,7 +46,11 @@
         <span>体験レッスン</span>
       </a>
 
-      {{ if eq .Section "events" }}
+      {{ if eq .Params.type "events"}}
+      <a class="navbar-item faa-parent animated-hover" href="/events">
+        <span class="icon has-text-danger faa-tada faa-fast" data-aos="zoom-out" data-aos-once="true">
+          <i class="fas fa-calendar-alt faa-pulse faa-fast animated"></i>
+      {{ else if eq .Section "events" }}
       <a class="navbar-item" data-aos="zoom-out" data-aos-once="true">
         <span class="icon has-text-danger">
           <i class="fas fa-calendar-alt faa-pulse faa-fast animated"></i>

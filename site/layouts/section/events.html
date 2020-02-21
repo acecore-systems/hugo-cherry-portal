@@ -19,7 +19,7 @@
 <script>
   const events = [{}
     {{ range (where .Pages "Section" "events") }}
-      ,{ title: '{{ .Params.title }}', description: '{{ .Params.description }}', date: '{{ .Params.holddate }}', thumbnail: '{{ .Params.thumbnail }}', link: '{{ .Permalink }}' }
+      ,{ title: '{{ .Params.title }}', date: '{{ .Params.date }}', thumbnail: '{{ .Params.thumbnail }}', link: '{{ .Permalink }}' }
     {{ end }}
   ]
   const weeks = ['日', '月', '火', '水', '木', '金', '土']
@@ -79,7 +79,7 @@
         } else {
           let event = events.find(event => new Date(event.date).getFullYear() === year && new Date(event.date).getMonth() == month - 1 && new Date(event.date).getDate() == dayCount)
           if (event) {
-            calendarHtml += '<td background=' + event.thumbnail + ' ><h3>' + dayCount + '</h3><a href=' + event.link + ' ><p>' + event.title + '</p><p>' + event.description + '</p></a></td>'
+            calendarHtml += '<td background=' + event.thumbnail + ' ><h3>' + dayCount + '</h3><a href=' + event.link + ' ><p>' + event.title + '</p></a></td>'
           } else {
             calendarHtml += '<td><h3>' + dayCount + '</h3></td>'
           }
