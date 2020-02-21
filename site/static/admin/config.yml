@@ -38,7 +38,7 @@ collections:
       - { label: "タイプ", name: "type", widget: "hidden", default: "blog" }
 
   - label: "イベント"
-    name: "faq"
+    name: "events"
     preview_path: "events/{{slug}}"
     folder: "site/content/events"
     filter: { field: "type", value: "events" }
@@ -55,15 +55,16 @@ collections:
       - { label: "タイプ", name: "type", widget: "hidden", default: "events" }
 
   - label: "よくある質問"
-    name: "faq"
+    name: "contact"
     preview_path: "contact"
-    folder: "site/content/faq"
+    folder: "site/content/contact"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "質問内容", name: "title", widget: "string" }
       - { label: "公開日", name: "publishDate", widget: "datetime" }
-      - { label: "答え", name: "answer", widget: "text" }  
+      - { label: "答え", name: "answer", widget: "text" }
+      - { label: "タイプ", name: "type", widget: "hidden", default: "faq" }      
 
   - label: "ページ"
     name: "page"
