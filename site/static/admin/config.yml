@@ -37,22 +37,33 @@ collections:
       - { label: "本文", name: "body", widget: "markdown" }
       - { label: "タイプ", name: "type", widget: "hidden", default: "blog" }
 
-  - label: "イベント" # 管理画面のサイドバーで使う
-    name: "events" # 管理画面のパスで使う　例：/admin/collections/blog
+  - label: "イベント"
+    name: "faq"
     preview_path: "events/{{slug}}"
-    folder: "site/content/events" # Markdownを保存するディレクトリ。Hugoのsectionにあたる
+    folder: "site/content/events"
     filter: { field: "type", value: "events" }
-    create: true # 新しいページを作ることを許可する
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Markdownのファイル名　例：YYYY-MM-DD-title.md
-    fields: # ページ作成画面で使う。Front Matterの値を書く
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
       - { label: "イベントタイトル", name: "title", widget: "string" }
       - { label: "イベント概要", name: "description", widget: "text" }
-      - { label: "カバー画像", name: "heroImg", widget: "image", default: "/img/hei_256x128.jpg"  }
-      - { label: "公開日", name: "publishDate", widget: "datetime"}
-      - { label: "開催日", name: "date", widget: "datetime"}
+      - { label: "カバー画像", name: "heroImg", widget: "image", default: "/img/hei_256x128.jpg" }
+      - { label: "公開日", name: "publishDate", widget: "datetime" }
+      - { label: "開催日", name: "date", widget: "datetime" }
       - { label: "カレンダー画像", name: "thumbnail", widget: "image" }
       - { label: "本文", name: "body", widget: "markdown" }
-      - { label: "タイプ", name: "type", widget: "hidden", default: "events" }      
+      - { label: "タイプ", name: "type", widget: "hidden", default: "events" }
+
+  - label: "よくある質問"
+    name: "faq"
+    preview_path: "contact"
+    folder: "site/content/faq"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "質問内容", name: "title", widget: "string" }
+      - { label: "公開日", name: "publishDate", widget: "datetime" }
+      - { label: "答え", name: "answer", widget: "text" }  
 
   - label: "ページ"
     name: "page"
