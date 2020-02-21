@@ -2,7 +2,7 @@
 title: "教室紹介"
 description: >-
   教室紹介
-heroimg: /img/city_256x128.jpg
+heroImg: /img/city_256x128.jpg
 ---
 
 <!--

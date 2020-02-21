@@ -2,11 +2,11 @@
   <div class="navbar-brand">
 
     <a class="navbar-item is-paddingless is-hidden-touch logo" href="/">
-      <img loading="lazy" src="/img/logo.png" alt="logo" data-aos="zoom-in" data-aos-once="true">
+      <img loading="lazy" decoding="async" src="/img/logo.png" alt="logo" data-aos="zoom-in" data-aos-once="true">
     </a>
 
     <a class="navbar-item is-paddingless is-hidden-desktop logo" href="/">
-      <img loading="lazy" src="/img/logo.png" alt="logo" data-aos="zoom-in-down" data-aos-once="true">
+      <img loading="lazy" decoding="async" src="/img/logo.png" alt="logo" data-aos="zoom-in-down" data-aos-once="true">
     </a>
 
     <a role="button" class="navbar-burger" data-aos="zoom-in" data-aos-once="true" data-target="navMenu" aria-label="menu" aria-expanded="false">
@@ -46,7 +46,11 @@
         <span>体験レッスン</span>
       </a>
 
-      {{ if eq .Section "events" }}
+      {{ if eq .Params.type "events"}}
+      <a class="navbar-item faa-parent animated-hover" href="/events">
+        <span class="icon has-text-danger faa-tada faa-fast" data-aos="zoom-out" data-aos-once="true">
+          <i class="fas fa-calendar-alt faa-pulse faa-fast animated"></i>
+      {{ else if eq .Section "events" }}
       <a class="navbar-item" data-aos="zoom-out" data-aos-once="true">
         <span class="icon has-text-danger">
           <i class="fas fa-calendar-alt faa-pulse faa-fast animated"></i>

@@ -1,0 +1,11 @@
+{{ define "main" }}
+
+<div class="container">
+  <p>記事作成日：{{ .PublishDate.Format "2006年1月2日" }}</p>
+  <p>開催日：{{ .Date.Format "2006年1月2日" }}</p>
+  <article class="content">
+    {{ .Content }}
+  </article>
+</div>
+
+{{ end }}

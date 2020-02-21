@@ -2,7 +2,7 @@
 title: "体験レッスン"
 description: >-
   体験レッスンの説明と、予約ページ
-heroimg: /img/city_256x128.jpg
+heroImg: /img/city_256x128.jpg
 ---
 
 <!--

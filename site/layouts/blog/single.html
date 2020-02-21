@@ -1,9 +1,9 @@
 {{ define "main" }}
 
 <div class="container">
-  <p>{{ .Date.Format "2006年1月2日" }}</p>
+  <p>記事作成日：{{ .PublishDate.Format "2006年1月2日" }}</p>
   <article class="content">
-    <img loading="lazy" src="{{ .Params.thumbnail }}" alt="{{ .Params.thumbnailAlt }}"/>
+    <img loading="lazy" decoding="async" src="{{ .Params.thumbnail }}" alt="{{ .Params.thumbnailAlt }}"/>
     {{ .Content }}
 
     <div id="disqus_thread"></div>
@@ -25,7 +25,6 @@
         (d.head || d.body).appendChild(s);
       })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 
   </article>
 </div>

@@ -1,8 +1,8 @@
 ---
 title: HAPPY　BIRTHDAY　TO 　YOU
 description: 笑顔
-heroimg: /img/DSC_0489.JPG
-date: 2020-02-01T04:44:50.976Z
+heroImg: /img/DSC_0489.JPG
+publishDate: 2020-02-01T04:44:50.976Z
 thumbnail: /img/DSC_0489.JPG
 thumbnailAlt: 笑顔
 type: blog

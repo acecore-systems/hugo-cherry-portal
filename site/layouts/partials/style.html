@@ -42,7 +42,7 @@
 
   /* ヒーロー */
   .hero {
-    background-image: url({{ .Params.heroimg }});
+    background-image: url({{ .Params.heroImg }});
     background-size: cover;
     background-position: center;
     position: relative;
@@ -85,8 +85,7 @@
   .hero .title {
     text-shadow: 0 0 5px #ffffff;
   }
-
-  @media screen and (min-width: 769px){
+  @media screen and (min-width: 769px) {
     .hero .title-home {
       font-family: 'Ubuntu', sans-serif;
       mix-blend-mode: color-burn;
@@ -98,7 +97,7 @@
       font-size: 2.9rem;
     }
   }
-  @media screen and (max-width: 768px){
+  @media screen and (max-width: 768px) {
     .hero .title-home {
       font-family: 'Ubuntu', sans-serif;
       mix-blend-mode: color-burn;
@@ -148,5 +147,4 @@
     bottom: 0;
     box-sizing: border-box;
   }
-
 </style>
