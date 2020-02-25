@@ -3,16 +3,16 @@
 <div class="container">
 
   <div class="content">
-    <div id="box" class="box column is-8 is-offset-2 is-shadowless">
 
       <h1 class="title is-4 has-text-centered">よくあるご質問</h1>
 
       {{ range (where .Pages "Section" "contact") }}
-      <p class="title is-5">{{ .Title }}</p>
-      <p class="subtitle is-5">{{ .Params.Answer }}</p>
+      <div class="box column is-8 is-offset-2">
+        <p class="title is-5"><span class="qanda">Q</span> {{ .Title }}</p>
+        <p class="subtitle is-5"><span class="qanda">A</span> {{ .Params.Answer }}</p>
+      </div>
       {{ end }}
 
-    </div>
   </div>
 
   <form name="contact" method="POST" action="/thankyou" data-netlify-recaptcha="true" data-netlify="true">
@@ -68,7 +68,13 @@
 
 {{ define "addstyle" }}
 
+<link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap&text=QA" rel="stylesheet">
+
 <style>
+
+  .qanda {
+    font-family: 'Share Tech Mono', sans-serif;
+  }
 
   @media screen and (max-width: 400px) {
     .section {
