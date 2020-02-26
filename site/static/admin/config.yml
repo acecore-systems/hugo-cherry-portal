@@ -58,6 +58,7 @@ collections:
     name: "contact"
     preview_path: "contact"
     folder: "site/content/contact"
+    filter: { field: "type", value: "faq" }
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -73,7 +74,7 @@ collections:
         label: "ホームページ"
         name: "home"
         fields:
-          - { tabel: "タイトル", name: "title", widget: "string" }
+          - { label: "タイトル", name: "title", widget: "string" }
           - { label: "このページの説明", name: "description", widget: "text" }
           - { label: "カバー画像", name: "heroImg", widget: "image" }
           - { label: "本文", name: "body", widget: "markdown" }
@@ -81,7 +82,7 @@ collections:
         label: "教室紹介"
         name: "products"
         fields:
-          - { tabel: "タイトル", name: "title", widget: "string" }
+          - { label: "タイトル", name: "title", widget: "string" }
           - { label: "このページの説明", name: "description", widget: "text" }
           - { label: "カバー画像", name: "heroImg", widget: "image" }
           - { label: "本文", name: "body", widget: "markdown" }
@@ -89,7 +90,7 @@ collections:
         label: "体験レッスン"
         name: "experience"
         fields:
-          - { tabel: "タイトル", name: "title", widget: "string" }
+          - { label: "タイトル", name: "title", widget: "string" }
           - { label: "このページの説明", name: "description", widget: "text" }
           - { label: "カバー画像", name: "heroImg", widget: "image" }
           - { label: "本文", name: "body", widget: "markdown" }
@@ -97,21 +98,21 @@ collections:
         label: "イベント"
         name: "events"
         fields:
-          - { tabel: "タイトル", name: "title", widget: "string" }
+          - { label: "タイトル", name: "title", widget: "string" }
           - { label: "このページの説明", name: "description", widget: "text" }
           - { label: "カバー画像", name: "heroImg", widget: "image" }
       - file: "site/content/blog/_index.md"
         label: "ブログ一覧"
         name: "blog"
         fields:
-          - { tabel: "タイトル", name: "title", widget: "string" }
+          - { label: "タイトル", name: "title", widget: "string" }
           - { label: "このページの説明", name: "description", widget: "text" }
           - { label: "カバー画像", name: "heroImg", widget: "image" }
       - file: "site/content/contact/_index.md"
         label: "お問い合わせ"
         name: "contact"
         fields:
-          - { tabel: "タイトル", name: "title", widget: "string" }
+          - { label: "タイトル", name: "title", widget: "string" }
           - { label: "このページの説明", name: "description", widget: "text" }
           - { label: "カバー画像", name: "heroImg", widget: "image" }
           - { label: "本文", name: "body", widget: "markdown" }
@@ -119,7 +120,7 @@ collections:
         label: "送信完了画面"
         name: "thankyou"
         fields:
-          - { tabel: "タイトル", name: "title", widget: "string" }
+          - { label: "タイトル", name: "title", widget: "string" }
           - { label: "このページの説明", name: "description", widget: "text" }
           - { label: "カバー画像", name: "heroImg", widget: "image" }
           - { label: "本文", name: "body", widget: "markdown" }
@@ -127,7 +128,7 @@ collections:
         label: "事業概要"
         name: "about"
         fields:
-          - { tabel: "タイトル", name: "title", widget: "string" }
+          - { label: "タイトル", name: "title", widget: "string" }
           - { label: "このページの説明", name: "description", widget: "text" }
           - { label: "カバー画像", name: "heroImg", widget: "image" }
           - { label: "本文", name: "body", widget: "markdown" }
@@ -135,7 +136,7 @@ collections:
         label: "AirKitchen"
         name: "airkitchn"
         fields:
-          - { tabel: "タイトル", name: "title", widget: "string" }
+          - { label: "タイトル", name: "title", widget: "string" }
           - { label: "このページの説明", name: "description", widget: "text" }
           - { label: "カバー画像", name: "heroImg", widget: "image" }
           - { label: "本文", name: "body", widget: "markdown" }
