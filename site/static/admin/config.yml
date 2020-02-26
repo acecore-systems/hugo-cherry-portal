@@ -58,6 +58,7 @@ collections:
     name: "contact"
     preview_path: "contact"
     folder: "site/content/contact"
+    filter: { field: "type", value: "faq" }
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
