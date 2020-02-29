@@ -4,7 +4,7 @@ description: 素晴らしい未来をむかえるために
 heroImg: /img/２月産まれバースデイ　４.jpg
 publishDate: 2020-02-29T07:07:21.189Z
 thumbnail: /img/２月産まれバースデイ　４.jpg
-thumbnailAlt: 新しい舞台へ！！
+thumbnailAlt: 素晴らしい未来をむかえるために
 type: blog
 ---
 3月はいつものように　**卒業式**　**懇談**　**終業式**　**春休み**　という流れの
