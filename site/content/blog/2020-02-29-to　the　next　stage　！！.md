@@ -1,5 +1,5 @@
 ---
-title: TO　THE　NEXT　STAGE　！！
+title: TO　THE　NEXT　STAGE　
 description: 素晴らしい未来をむかえるために
 heroImg: /img/２月産まれバースデイ　４.jpg
 publishDate: 2020-02-29T07:07:21.189Z
