@@ -4,13 +4,17 @@
 
   <div class="content">
 
-      <h1 class="title is-4 has-text-centered">よくあるご質問（FAQ）</h1>
+      {{ range $i, $e:= (where .Pages "Section" "contact") }}
 
-      {{ range (where .Pages "Section" "contact") }}
+        {{ if (eq $i 0) }}
+          <h1 class="title is-4 has-text-centered">よくあるご質問（FAQ）</h1>
+        {{ end }}
+
       <div class="box column is-8 is-offset-2">
         <p class="title is-5"><span class="qanda">Q</span> {{ .Title }}</p>
         <p class="subtitle is-5"><span class="qanda">A</span> {{ .Params.Answer }}</p>
       </div>
+
       {{ end }}
 
   </div>
