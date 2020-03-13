@@ -3,7 +3,7 @@ dist/
 site/data/webpack.json
 /npm-debug.log
 yarn-error.log
-resources
+site/resources
 site/hugo.bat
 site/hugo.command
 public
