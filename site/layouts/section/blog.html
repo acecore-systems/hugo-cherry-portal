@@ -2,9 +2,9 @@
 
 <div class="container">
   {{ .Content }}
-  <div class="columns">
+  <div class="columns is-multiline">
     {{ range (where .Pages "Section" "blog") }}
-    <div class="card column">
+    <div class="card column is-3">
       <div class="card-image">
         <figure class="image is-4by3">
           <img loading="lazy" decoding="async" src="{{ .Params.thumbnail }}" alt="{{ .Params.thumbnailAlt }}"/>

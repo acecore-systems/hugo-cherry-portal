@@ -1,3 +1,17 @@
 {{ define "main" }}
 
+<div class="container">
+
+  <form action="/.netlify/functions/hello" >
+
+    <p>
+      <label>email<br><input type="text" name="email"></label>
+      <label>password<br><input type="text" name="password"></label>
+    </p>
+    <p><button type="submit">send</button></p>
+
+  </form>
+
+</div>
+
 {{ end }}
