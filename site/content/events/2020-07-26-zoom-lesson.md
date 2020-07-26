@@ -12,4 +12,6 @@ type: events
 ---
 **ZOOM LESSON**
 
+**２０２０　７　２７　MONDAY**
+
 **19:00 ～ 19:40**
