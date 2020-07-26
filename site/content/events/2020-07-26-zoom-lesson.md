@@ -5,7 +5,7 @@ description: |+
 
 
 heroImg: /img/kimg2777.jpg
-publishDate: 2020-07-26T13:48:34.029Z
+publishDate: 2020-07-27T13:48:34.029Z
 date: 2020-07-26T16:00:00.000Z
 thumbnail: /img/kimg2777.jpg
 type: events
