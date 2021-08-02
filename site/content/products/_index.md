@@ -1,8 +1,10 @@
 ---
 title: 「安心して間違えることができる教室」
-description: |-
-  安心できる環境で学ぶことで子どもは勇気を持って
-  自分の世界を作ることができます。
+description: >-
+  That  is wonderful  place . A place where you  can make mistakes with
+  confidence  is 
+
+  important place. 
 heroimg: /img/201912月17日国際交流_LI (2).jpg
 heroImg: /img/201912月17日国際交流_LI (2).jpg
 ---
