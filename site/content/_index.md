@@ -1,12 +1,11 @@
 ---
 title: 　　英語多読教室　無料体験　申し込み受け付け中！！　
 description: |-
-  Cherry英語多読教室　　
+  Cherry英語多読教室　（火曜日　水曜日　木曜日）　
   　　　
-  Cherry絵画造形教室
+  Cherry絵画造形教室　（金曜日）
   　　
-  みんなのCafe　風
-  　　（予約制）
+  みんなのCafe　風　　（予約制）
 heroImg: /img/1584776984659.jpg
 ---
 　**無料体験受付中！**
