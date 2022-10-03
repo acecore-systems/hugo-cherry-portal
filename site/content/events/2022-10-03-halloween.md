@@ -2,7 +2,7 @@
 title: "Halloween  "
 description: Cherry英語多読教室ってどんなところ？ご興味のあるかたはのぞきに来てね！
 heroImg: /img/dsc_0114.jpg
-publishDate: 2022-10-03T00:03:47.683Z
+publishDate: 2022-09-21T00:00:47.683Z
 date: 2022-10-26T07:15:47.740Z
 thumbnail: /img/dsc_0114.jpg
 type: events
