@@ -6,7 +6,7 @@ description: |-
   Cherry絵画造形教室　（金曜日　第２・第４　岸和田教室）
   　　
   みんなのCafe　風　　（月曜日　予約制　肥後橋教室）　
-heroImg: /img/dsc_0432.jpg
+heroImg: /img/dsc_1497.jpg
 ---
 　　　　　　　**新規入会　無料体験　受付中**　　　
 
