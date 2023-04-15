@@ -3,7 +3,7 @@ title: 入会金はいつも不要　
 description: |-
   Cherry英語多読教（火曜　木曜　岸和田教室・水曜　靭会館）
   　　　
-  Cherry絵画造形教室　（金曜　第２・第４　岸和田教室）
+  Cherry絵画造形教室　（　月2回月曜日　岸和田教室）
   　　
   みんなのCafe　風　（月曜日　予約制　靭会館・岸和田教室）　
 heroImg: /img/dsc_0725.jpg
