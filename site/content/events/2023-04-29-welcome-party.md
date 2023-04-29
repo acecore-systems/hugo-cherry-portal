@@ -3,7 +3,7 @@ title: Welcome Party
 description: イースターにちなんだゲームをしながら新入生と交流
 heroImg: /img/dsc_0927.jpg
 publishDate: 2023-03-29T23:38:00.000Z
-date: 2023-04-29T23:38:14.144Z
+date: 2023-04-26T07:05:26.753Z
 thumbnail: /img/dsc_0927.jpg
 type: events
 ---
