@@ -1,5 +1,5 @@
 ---
-title: お問い合せ
+title: お問い合わせ・よくある質問
 description: お問い合わせ送信画面です。
 heroImg: /img/city_256x128.jpg
 ---
