@@ -1,7 +1,7 @@
 ---
-title: 夏の体験レッスンは個別相談から🍒
+title: 夏の体験レッスンはオンライン個別相談の後🍒
 description: |
-  夏の体験レッスンは個別相談から🍒
+  夏の体験レッスンはオンライン個別相談の後🍒
 heroImg: /img/storypic_00011682_burst220624165241.jpg
 ---
 **Cherry英語多読教室**  
