@@ -3,7 +3,7 @@ title: 卒業生・在籍生の声
 description: |
   卒業生・在籍生の声
 heroimg: /img/201912月17日国際交流_LI (2).jpg
-heroImg: /img/201912月17日国際交流_LI (2).jpg
+heroImg: /img/dsc_0633.jpg
 ---
 ![](/img/dsc_1015.jpg)
 
